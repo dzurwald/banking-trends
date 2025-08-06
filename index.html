@@ -3,43 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GenAI & Conversational Banking</title>
+  <title>Banking Trends</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body class="bg-black text-white font-[Inter]">
-  <div class="p-6 space-y-6">
-    <h1 class="text-3xl font-bold">GenAI & Conversational Banking</h1>
+  <!-- Password Lock -->
+  <div id="login" class="flex h-screen items-center justify-center">
+    <div class="bg-zinc-800 p-8 shadow-md rounded-md text-center border border-zinc-700">
+      <h1 class="mb-4 text-xl font-semibold">Enter Password</h1>
+      <input id="password" type="password" class="border border-zinc-600 bg-zinc-900 text-white p-2 w-full mb-4"/>
+      <button onclick="checkPassword()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Enter</button>
+    </div>
+  </div>
 
-    <p style="color: white;">This should now be white (inline CSS override).</p>
+  <!-- Main App -->
+  <div id="app" class="hidden h-screen flex">
+    <!-- Sidebar -->
+    <div class="w-64 bg-zinc-900 p-4 border-r border-zinc-800 overflow-y-auto">
+      <h2 class="font-bold text-lg mb-4">Navigation</h2>
+      <ul class="space-y-2 text-white">
+        <li><a href="sections/home.html" target="content" class="hover:underline">Home</a></li>
+        <hr class="border-zinc-700" />
+        <li><a href="sections/genai.html" target="content" class="hover:underline">GenAI & Conversational Banking</a></li>
+        <li><a href="sections/personalization.html" target="content" class="hover:underline">Personalization</a></li>
+        <li><a href="sections/wealth.html" target="content" class="hover:underline">Wealth Distribution</a></li>
+        <li><a href="sections/longevity.html" target="content" class="hover:underline">Longevity</a></li>
+        <li><a href="sections/stablecoins.html" target="content" class="hover:underline">Stablecoins</a></li>
+        <li><a href="sections/tokenization.html" target="content" class="hover:underline">Tokenization</a></li>
+        <li><a href="sections/embedded.html" target="content" class="hover:underline">Embedded Finance</a></li>
+        <li><a href="sections/beyond.html" target="content" class="hover:underline">Beyond Banking</a></li>
+        <li><a href="sections/genz.html" target="content" class="hover:underline">GenZ & Banking</a></li>
+        <li><a href="sections/security.html" target="content" class="hover:underline">Security & Digital Identity</a></li>
+        <li><a href="sections/monetisation.html" target="content" class="hover:underline">Monetisation of IC</a></li>
+        <li><a href="sections/inclusion.html" target="content" class="hover:underline">Financial Inclusion</a></li>
+        <hr class="border-zinc-700" />
+        <li><a href="sections/newsletters.html" target="content" class="hover:underline">Newsletters</a></li>
+        <li><a href="sections/contact.html" target="content" class="hover:underline">Contact</a></li>
+      </ul>
+    </div>
 
-    <h2 class="text-2xl font-semibold">Why it is important</h2>
-    <p class="text-lg">GenAI is reshaping how banks interact with customers, enabling 24/7 service and personalized experiences at scale.</p>
-
-    <h2 class="text-2xl font-semibold">Market Size / Opportunity</h2>
-    <p class="text-lg">The global AI in fintech market is expected to reach over $40B by 2030, driven by automation and user-centric interactions.</p>
-
-    <h2 class="text-2xl font-semibold">Important Insights</h2>
-    <p class="text-lg">Customers expect fast, natural communication. GenAI offers cost savings and better CX, especially in call centers and support bots.</p>
-
-    <h2 class="text-2xl font-semibold">Success Stories</h2>
-    <ul class="list-disc ml-6 text-blue-400">
-      <li><a href="https://www.businessinsider.com/erica-bank-of-america-ai" target="_blank" class="underline">Bank of America's Erica</a></li>
-      <li><a href="https://www.bbva.com/en/bbva-launches-ai-powered-digital-assistant/" target="_blank" class="underline">BBVA's AI Assistant</a></li>
-    </ul>
-
-    <h2 class="text-2xl font-semibold">Ideas</h2>
-    <ul class="list-disc ml-6">
-      <li>AI-driven financial health checkups via chat</li>
-      <li>Voice-based onboarding for new customers</li>
-      <li>Automated insights delivered in plain language</li>
-    </ul>
-
-    <h2 class="text-2xl font-semibold">Articles Worth Mentioning</h2>
-    <ul class="list-disc ml-6 text-blue-400">
-      <li><a href="https://www.businessinsider.com/erica-bank-of-america-ai" target="_blank" class="underline">Bank of America's Erica</a></li>
-      <li><a href="https://www.bbva.com/en/bbva-launches-ai-powered-digital-assistant/" target="_blank" class="underline">BBVA's AI Assistant</a></li>
-    </ul>
+    <!-- Content Area -->
+    <iframe name="content" class="flex-1 p-6 bg-black text-white"></iframe>
   </div>
 </body>
 </html>
