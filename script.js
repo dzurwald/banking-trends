@@ -1,4 +1,4 @@
-const PASSWORD = "bank123"; // You can change this
+const PASSWORD = "bank123"; // Change this if you want
 
 function checkPassword() {
   const input = document.getElementById("password").value;
