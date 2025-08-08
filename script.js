@@ -1,17 +1,27 @@
-// Keep your existing checkPassword() if you already have it.
-// This just toggles login/app visibility.
+// ===== Password Lock =====
+const CORRECT_PASSWORD = "prirodzenenajlepsi";
+
 function checkPassword() {
-  const pass = document.getElementById('password').value;
-  // TODO: replace with your real check
-  if (pass && pass.length > 0) {
+  const passEl = document.getElementById('password');
+  const pass = passEl?.value?.trim() || "";
+
+  if (pass === CORRECT_PASSWORD) {
     document.getElementById('login').classList.add('hidden');
     document.getElementById('app').classList.remove('hidden');
+    passEl.value = "";
   } else {
-    alert('Enter a password');
+    alert('Wrong password. Try again.');
+    passEl.value = "";
+    passEl.focus();
   }
 }
 
-// Sidebar controls
+// Submit on Enter in the password field
+document.getElementById('password')?.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') checkPassword();
+});
+
+// ===== Sidebar controls =====
 const sidebar = document.getElementById('sidebar');
 const overlay = document.getElementById('overlay');
 const toggleBtn = document.getElementById('sidebarToggle');
@@ -37,9 +47,8 @@ toggleBtn?.addEventListener('click', toggleSidebar);
 overlay?.addEventListener('click', closeSidebar);
 
 // Close sidebar after clicking a link on mobile
-sidebar.querySelectorAll('a[target="content"]').forEach(a => {
+sidebar?.querySelectorAll('a[target="content"]').forEach(a => {
   a.addEventListener('click', () => {
-    // Only auto-close on small screens
     if (window.matchMedia('(max-width: 1023px)').matches) closeSidebar();
   });
 });
