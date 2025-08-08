@@ -18,7 +18,6 @@ function enforceLock() {
 
 function checkPassword(e) {
   if (e) e.preventDefault();
-
   const passEl = document.getElementById("password");
   const pass = passEl?.value?.trim() || "";
 
@@ -42,27 +41,50 @@ function logout() {
 document.addEventListener("DOMContentLoaded", () => {
   enforceLock();
 
-  // Submit on Enter in the password field (form handles it, this is extra safety)
+  // Enter submits
   document.getElementById("password")?.addEventListener("keydown", (e) => {
     if (e.key === "Enter") checkPassword(e);
   });
 
-  // ===== Sidebar controls =====
+  // ===== Sidebar controls (mobile + desktop) =====
   const sidebar = document.getElementById("sidebar");
   const overlay = document.getElementById("overlay");
   const toggleBtn = document.getElementById("sidebarToggle");
   const insideCloseBtn = document.getElementById("sidebarClose");
+  const contentWrap = document.getElementById("contentWrap"); // shifts on desktop
+
+  function isDesktop() {
+    return window.matchMedia("(min-width: 1024px)").matches; // lg breakpoint
+  }
+
+  function applyDesktopShift(open) {
+    // Shift the content right when the fixed sidebar is visible on desktop
+    if (!contentWrap) return;
+    if (open) {
+      contentWrap.classList.add("lg:ml-72");
+    } else {
+      contentWrap.classList.remove("lg:ml-72");
+    }
+  }
 
   function openSidebar() {
     sidebar.classList.remove("-translate-x-full");
     overlay.classList.remove("hidden");
     toggleBtn?.setAttribute("aria-expanded", "true");
+    if (isDesktop()) {
+      // No overlay on desktop; keep it hidden and shift content instead
+      overlay.classList.add("hidden");
+      applyDesktopShift(true);
+    }
   }
 
   function closeSidebar() {
     sidebar.classList.add("-translate-x-full");
     overlay.classList.add("hidden");
     toggleBtn?.setAttribute("aria-expanded", "false");
+    if (isDesktop()) {
+      applyDesktopShift(false);
+    }
   }
 
   function toggleSidebar() {
@@ -72,18 +94,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
   toggleBtn?.addEventListener("click", toggleSidebar);
   overlay?.addEventListener("click", closeSidebar);
-  insideCloseBtn?.addEventListener("click", closeSidebar);
+  insideCloseBtn?.addEventListener("click", toggleSidebar); // acts like collapse on desktop
 
   // Close sidebar after clicking a link on mobile
   sidebar?.querySelectorAll('a[target="content"]').forEach((a) => {
     a.addEventListener("click", () => {
-      if (window.matchMedia("(max-width: 1023px)").matches) closeSidebar();
+      if (!isDesktop()) closeSidebar();
     });
   });
 
-  // Optional: close on Escape (mobile)
+  // Escape closes
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closeSidebar();
+  });
+
+  // Initial state: open on desktop, closed on mobile
+  function setInitialSidebar() {
+    if (isDesktop()) {
+      openSidebar();
+    } else {
+      closeSidebar();
+    }
+  }
+  setInitialSidebar();
+
+  // Handle resize breakpoint changes
+  let prevDesktop = isDesktop();
+  window.addEventListener("resize", () => {
+    const nowDesktop = isDesktop();
+    if (nowDesktop !== prevDesktop) {
+      prevDesktop = nowDesktop;
+      setInitialSidebar();
+    }
   });
 });
 
