@@ -13,8 +13,6 @@
   <div id="login" class="flex h-screen items-center justify-center">
     <div class="bg-zinc-800 p-8 shadow-md rounded-md text-center border border-zinc-700 w-[92%] max-w-md">
       <h1 class="mb-4 text-xl font-semibold">Enter Password</h1>
-
-      <!-- Use a form to capture Enter key reliably -->
       <form id="loginForm" class="space-y-4" onsubmit="checkPassword(event)">
         <input
           id="password"
@@ -38,8 +36,8 @@
     <!-- Top Bar -->
     <header class="flex items-center gap-3 p-3 border-b border-zinc-800 bg-black sticky top-0 z-20">
       <button id="sidebarToggle"
-              class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-zinc-800 hover:bg-zinc-900"
-              aria-label="Toggle menu" aria-expanded="false">
+              class="inline-flex items-center justify-center w-10 h-10 rounded border border-zinc-800 hover:bg-zinc-900"
+              aria-label="Toggle menu" aria-expanded="false" title="Toggle menu">
         <!-- hamburger -->
         <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -47,25 +45,25 @@
         </svg>
       </button>
       <h1 class="text-lg font-semibold">Banking Trends</h1>
-
       <!-- Optional logout -->
       <!-- <button onclick="logout()" class="ml-auto text-sm text-zinc-400 hover:text-white">Logout</button> -->
     </header>
 
-    <div class="flex-1 flex overflow-hidden">
-      <!-- Overlay (mobile) -->
+    <!-- contentWrap is shifted on desktop when sidebar is open -->
+    <div id="contentWrap" class="flex-1 flex overflow-hidden transition-[margin] duration-200">
+      <!-- Overlay (mobile only) -->
       <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
 
-      <!-- Sidebar -->
+      <!-- Sidebar: fixed across breakpoints, starts hidden (translated) and is toggled by JS -->
       <nav id="sidebar"
-           class="fixed lg:static inset-y-0 left-0 z-40 w-72 bg-zinc-900 p-4 border-r border-zinc-800 overflow-y-auto
-                  transform -translate-x-full lg:translate-x-0 transition-transform duration-200 will-change-transform">
-        <!-- Sidebar header with internal close/collapse control (mobile) -->
+           class="fixed inset-y-0 left-0 z-40 w-72 bg-zinc-900 p-4 border-r border-zinc-800 overflow-y-auto
+                  transform -translate-x-full transition-transform duration-200 will-change-transform">
+        <!-- Sidebar header with internal collapse control -->
         <div class="flex items-center justify-between mb-3">
           <h2 class="font-bold text-lg">Navigation</h2>
           <button id="sidebarClose"
-                  class="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded border border-zinc-800 hover:bg-zinc-800"
-                  aria-label="Hide menu">
+                  class="inline-flex items-center justify-center w-9 h-9 rounded border border-zinc-800 hover:bg-zinc-800"
+                  aria-label="Hide menu" title="Collapse">
             <!-- chevron-left -->
             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
