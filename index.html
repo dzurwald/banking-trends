@@ -11,44 +11,65 @@
 <body class="bg-black text-white font-[Inter]">
   <!-- Password Lock -->
   <div id="login" class="flex h-screen items-center justify-center">
-    <div class="bg-zinc-800 p-8 shadow-md rounded-md text-center border border-zinc-700">
+    <div class="bg-zinc-800 p-8 shadow-md rounded-md text-center border border-zinc-700 w-[92%] max-w-md">
       <h1 class="mb-4 text-xl font-semibold">Enter Password</h1>
-      <input id="password" type="password" class="border border-zinc-600 bg-zinc-900 text-white p-2 w-full mb-4"/>
-      <button onclick="checkPassword()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">Enter</button>
+      <input id="password" type="password" class="border border-zinc-600 bg-zinc-900 text-white p-2 w-full mb-4 rounded"/>
+      <button onclick="checkPassword()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded w-full">Enter</button>
     </div>
   </div>
 
   <!-- Main App -->
-  <div id="app" class="hidden h-screen flex">
-    <!-- Sidebar -->
-    <div class="w-64 bg-zinc-900 p-4 border-r border-zinc-800 overflow-y-auto">
-      <h2 class="font-bold text-lg mb-4">Navigation</h2>
-      <ul class="space-y-2 text-white">
-        <li><a href="sections/home.html" target="content" class="hover:underline">Home</a></li>
-        <hr class="border-zinc-700" />
-        <li><a href="sections/genai.html" target="content" class="hover:underline">Conversational Banking</a></li>
-        <li><a href="sections/personalization.html" target="content" class="hover:underline">Personalization</a></li>
-        <li><a href="sections/wealth.html" target="content" class="hover:underline">Wealth Distribution</a></li>
-        <li><a href="sections/longevity.html" target="content" class="hover:underline">Longevity</a></li>
-        <li><a href="sections/stablecoins.html" target="content" class="hover:underline">Stablecoins</a></li>
-        <li><a href="sections/tokenization.html" target="content" class="hover:underline">Tokenization</a></li>
-        <li><a href="sections/housing.html" target="content" class="hover:underline">Housing & Living Crisis</a></li>
-        <li><a href="sections/embedded.html" target="content" class="hover:underline">Embedded Finance</a></li>
-        <li><a href="sections/esg.html" target="content" class="hover:underline">ESG</a></li>
-        <li><a href="sections/beyond.html" target="content" class="hover:underline">Beyond Banking</a></li>
-        <li><a href="sections/genz.html" target="content" class="hover:underline">GenZ & Banking</a></li>
-        <li><a href="sections/security.html" target="content" class="hover:underline">Security & Digital Identity</a></li>
-        <li><a href="sections/monetisation.html" target="content" class="hover:underline">Monetisation of IC</a></li>
-        <li><a href="sections/inclusion.html" target="content" class="hover:underline">Financial Inclusion</a></li>
-        <li><a href="sections/literacy.html" target="content" class="hover:underline">Financial Literacy</a></li>
-        <hr class="border-zinc-700" />
-        <li><a href="sections/newsletters.html" target="content" class="hover:underline">Newsletters</a></li>
-        <li><a href="sections/contact.html" target="content" class="hover:underline">Contact</a></li>
-      </ul>
-    </div>
+  <div id="app" class="hidden h-screen flex flex-col">
+    <!-- Top Bar -->
+    <header class="flex items-center gap-3 p-3 border-b border-zinc-800 bg-black sticky top-0 z-20">
+      <button id="sidebarToggle"
+              class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded border border-zinc-800 hover:bg-zinc-900"
+              aria-label="Toggle menu" aria-expanded="false">
+        <!-- hamburger -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <h1 class="text-lg font-semibold">Banking Trends</h1>
+    </header>
 
-    <!-- Content Area -->
-    <iframe name="content" class="flex-1 p-6 bg-black text-white"></iframe>
+    <div class="flex-1 flex overflow-hidden">
+      <!-- Overlay (mobile) -->
+      <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+      <!-- Sidebar -->
+      <nav id="sidebar"
+           class="fixed lg:static inset-y-0 left-0 z-40 w-72 bg-zinc-900 p-4 border-r border-zinc-800 overflow-y-auto
+                  transform -translate-x-full lg:translate-x-0 transition-transform duration-200 will-change-transform">
+        <h2 class="font-bold text-lg mb-3">Navigation</h2>
+        <ul class="space-y-1 text-white text-sm">
+          <li><a href="sections/home.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Home</a></li>
+          <hr class="border-zinc-700 my-2" />
+          <li><a href="sections/genai.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Conversational Banking</a></li>
+          <li><a href="sections/personalization.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Personalization</a></li>
+          <li><a href="sections/wealth.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Wealth Distribution</a></li>
+          <li><a href="sections/longevity.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Longevity</a></li>
+          <li><a href="sections/stablecoins.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Stablecoins</a></li>
+          <li><a href="sections/tokenization.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Tokenization</a></li>
+          <li><a href="sections/housing.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Housing & Living Crisis</a></li>
+          <li><a href="sections/embedded.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Embedded Finance</a></li>
+          <li><a href="sections/esg.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">ESG</a></li>
+          <li><a href="sections/beyond.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Beyond Banking</a></li>
+          <li><a href="sections/genz.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">GenZ & Banking</a></li>
+          <li><a href="sections/security.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Security & Digital Identity</a></li>
+          <li><a href="sections/monetisation.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Monetisation of IC</a></li>
+          <li><a href="sections/inclusion.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Financial Inclusion</a></li>
+          <li><a href="sections/literacy.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Financial Literacy</a></li>
+          <hr class="border-zinc-700 my-2" />
+          <li><a href="sections/newsletters.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Newsletters</a></li>
+          <li><a href="sections/contact.html" target="content" class="block px-3 py-2 rounded hover:bg-zinc-800">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Content Area -->
+      <iframe name="content" id="contentFrame" class="flex-1 bg-black text-white" src="sections/home.html"></iframe>
+    </div>
   </div>
 </body>
 </html>
