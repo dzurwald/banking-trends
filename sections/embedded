@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Embedded Finance</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-[Inter]">
+  <div class="p-6 space-y-6">
+    <h1 class="text-3xl font-bold">Embedded Finance</h1>
+
+    <h2 class="text-2xl font-semibold">Why It Is Important</h2>
+    <p class="text-lg">
+      Embedded finance represents a fundamental shift from traditional banking models to seamless integration of financial services within non-financial platforms. This approach eliminates friction from financial transactions, enabling customers to access banking services precisely when and where they need them.
+      <strong>Companies implementing embedded finance solutions see 2–5× higher customer lifetime value and ~$70 in additional annual revenue per customer</strong>
+      <sup><a href="#source114" class="text-blue-400 underline">[114]</a></sup>.
+      The trend addresses changing consumer expectations for seamless, contextual financial experiences while opening new distribution channels for banks.
+    </p>
+
+    <h2 class="text-2xl font-semibold">Market Size / Opportunity</h2>
+    <p class="text-lg">
+      The embedded finance market demonstrates extraordinary growth potential:
+      <br/>— <strong>Market Size (2024): $111.72 billion</strong>
+      <br/>— <strong>Projected Market Size (2030): $1,732.53 billion</strong>
+      <br/>— <strong>CAGR:</strong> 31.53% (2025–2034)
+      <sup><a href="#source115" class="text-blue-400 underline">[115]</a></sup>
+      <br/><br/>
+      Alternative projections show:
+      <br/>— <strong>Market Size (2025): $148.38 billion</strong> reaching <strong>$1,217.37 billion by 2033</strong> at <strong>28.50% CAGR</strong>
+      <sup><a href="#source116" class="text-blue-400 underline">[116]</a></sup>
+      <br/>— <strong>Payments segment dominates with 44.23% market share</strong>, while <strong>investments shows fastest growth at 28.52% CAGR</strong>
+      <sup><a href="#source117" class="text-blue-400 underline">[117]</a></sup>
+    </p>
+
+    <h2 class="text-2xl font-semibold">Important Insights</h2>
+    <p class="text-lg">
+      <strong>Platform Dominance</strong>: <strong>Asia-Pacific is forecast to be the fastest-growing region at 26.45% CAGR through 2030</strong>, driven by mobile-first consumer behavior and super-app ecosystems
+      <sup><a href="#source117" class="text-blue-400 underline">[117]</a></sup>.
+      <br/><br/>
+      <strong>B2B Expansion</strong>: <strong>B2B marketplaces integrating payments, lending, and treasury tools improve seller retention while automating cash-flow analytics</strong>
+      <sup><a href="#source117" class="text-blue-400 underline">[117]</a></sup>.
+      <br/><br/>
+      <strong>Revenue Impact</strong>: <strong>Embedded finance generates up to $70 in additional annual revenue per customer through transaction fees and improved retention</strong>
+      <sup><a href="#source114" class="text-blue-400 underline">[114]</a></sup>.
+    </p>
+
+    <h2 class="text-2xl font-semibold">Success Stories</h2>
+    <ul class="list-disc ml-6">
+      <li><strong>Shopify Balance</strong> — Financial account for commerce businesses offering faster access to earnings, expense tracking, and rewards
+        <sup><a href="#source118" class="text-blue-400 underline">[118]</a><a href="#source119" class="text-blue-400 underline ml-1">[119]</a></sup>.
+      </li>
+      <li><strong>Uber Pro Card &amp; Financial Services</strong> — Debit cards, instant payouts, loans, and more integrated within the platform
+        <sup><a href="#source120" class="text-blue-400 underline">[120]</a></sup>.
+      </li>
+      <li><strong>Toast Pay Card</strong> — Restaurant-focused instant tip payouts and early wage access
+        <sup><a href="#source121" class="text-blue-400 underline">[121]</a></sup>.
+      </li>
+      <li><strong>Citizens Bank × Apple</strong> — Installment loans for iPhone purchases, expanding to broader e‑commerce financing
+        <sup><a href="#source122" class="text-blue-400 underline">[122]</a></sup>.
+      </li>
+      <li><strong>Klarna × Uber</strong> — BNPL integrated into ride‑hailing for simplified payments and new acquisition channels
+        <sup><a href="#source123" class="text-blue-400 underline">[123]</a></sup>.
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold">Articles Worth Mentioning</h2>
+    <ul class="list-disc ml-6 text-blue-400">
+      <li>The Rise of Embedded Finance: New Opportunities for Banks
+        <sup><a href="#source160" class="text-blue-400 underline">[160]</a></sup>
+      </li>
+      <li>Embedded Finance: The choices and trade-offs for US banks
+        <sup><a href="#source122" class="text-blue-400 underline">[122]</a></sup>
+      </li>
+      <li>Top 13 Embedded Finance Use Cases
+        <sup><a href="#source234" class="text-blue-400 underline">[234]</a></sup>
+      </li>
+      <li>How “Uberization” drives embedded payments
+        <sup><a href="#source123" class="text-blue-400 underline">[123]</a></sup>
+      </li>
+      <li>Embedded Finance Solutions Guide 2025
+        <sup><a href="#source114" class="text-blue-400 underline">[114]</a></sup>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold">Ideas for CEE Banks</h2>
+    <ul class="list-disc ml-6">
+      <li><strong>E‑commerce Marketplace Banking</strong>: Offer instant merchant financing, working capital loans, and treasury services embedded in seller dashboards.</li>
+      <li><strong>Gig Economy Financial Hub</strong>: Instant payouts, expense management, and tax prep services integrated into leading regional platforms.</li>
+      <li><strong>Healthcare Payment Solutions</strong>: Embedded procedure financing and medical savings accounts via provider portals.</li>
+      <li><strong>Agricultural Finance Integration</strong>: Embedded lending and weather‑based insurance within agri supply‑chain tools.</li>
+      <li><strong>Real Estate Transaction Banking</strong>: Seamless mortgage and insurance journeys embedded into property listing sites.</li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold">Sources</h2>
+    <ol start="114" class="list-decimal ml-6 text-blue-400 space-y-1">
+      <li id="source114"><a href="https://sdk.finance/embedded-finance-solutions-how-businesses-are-integrating-financial-services/" target="_blank" class="underline">Embedded Finance Solutions [Guide 2025] — SDK Finance</a></li>
+      <li id="source115"><a href="https://www.precedenceresearch.com/embedded-finance-market" target="_blank" class="underline">Embedded Finance Market Size to Hit USD 1,732.53 Bn by 2034 — Precedence Research</a></li>
+      <li id="source116"><a href="https://www.imarcgroup.com/embedded-finance-market" target="_blank" class="underline">Embedded Finance Market Size, Share, Growth Report, 2033 — IMARC</a></li>
+      <li id="source117"><a href="https://www.mordorintelligence.com/industry-reports/embedded-finance-market" target="_blank" class="underline">Embedded Finance Market — Mordor Intelligence</a></li>
+      <li id="source118"><a href="https://www.shopify.com/balance" target="_blank" class="underline">A financial account optimized for commerce — Shopify Balance</a></li>
+      <li id="source119"><a href="https://betakit.com/shopify-combines-its-financial-solutions-into-one-dashboard/" target="_blank" class="underline">Shopify combines its financial solutions into one dashboard — BetaKit</a></li>
+      <li id="source120"><a href="https://jabian.com/insights/how-amazon-airbnb-and-uber-are-using-embedded-finance-to-stay-ahead-of-the-curve" target="_blank" class="underline">How Amazon, Airbnb, and Uber Use Embedded Finance — Jabian</a></li>
+      <li id="source121"><a href="https://synctera.com/post/guide-to-projecting-revenue-from-embedded-banking-products" target="_blank" class="underline">Guide to Projecting Revenue from Embedded Banking Products — Synctera</a></li>
+      <li id="source122"><a href="https://www.mckinsey.com/industries/financial-services/our-insights/embedded-finance-the-choices-and-trade-offs-for-us-banks" target="_blank" class="underline">Embedded finance: The choices and trade-offs for US banks — McKinsey</a></li>
+      <li id="source123"><a href="https://www.americanbanker.com/payments/news/u-s-bank-key-discuss-embedded-payments-with-american-banker" target="_blank" class="underline">How “Uberization” drives embedded payments — American Banker</a></li>
+
+      <!-- Articles worth mentioning (additional refs) -->
+      <li id="source160"><a href="https://euronetsoftware.com/embedded-finance-new-opportunities/" target="_blank" class="underline">The Rise of Embedded Finance: New Opportunities for Banks — Euronet Software</a></li>
+      <li id="source234"><a href="https://www.fundthrough.com/blog/ask-fundthrough/top-13-embedded-finance-use-cases/" target="_blank" class="underline">Top 13 Embedded Finance Use Cases — FundThrough</a></li>
+    </ol>
+  </div>
+</body>
+</html>
