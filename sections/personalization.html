@@ -6,6 +6,8 @@
   <title>AI Personalization in Banking</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Added to match genai.html -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-black text-white font-[Inter]">
   <div class="p-6 space-y-6">
@@ -54,10 +56,9 @@
       <li><strong>Natural‑Language Product UI Generator</strong>: Generate onboarding/product pages automatically from user prompts like “create savings goal dashboard.”</li>
     </ul>
 
-    
-    <!-- === New Chart for Topic Evaluation === -->
+    <!-- === Chart for Topic Evaluation (aligned with genai.html) === -->
     <div class="bg-zinc-900 p-4 rounded-lg mt-6">
-      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: Generative AI & Conversational Banking</h3>
+      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: AI Personalization in Banking</h3>
       <div class="h-64">
         <canvas id="topicChart"></canvas>
       </div>
@@ -94,10 +95,13 @@
       <li id="source47"><a href="https://www.genpact.com/insight/fintech-futures-and-genpact-discuss-generative-ai" target="_blank" class="underline">FinTech Futures & Genpact on Generative AI</a></li>
       <li id="source48"><a href="https://www.adaglobal.com/resources/insights/from-transactions-to-conversations-the-evolution-of-banking-with-ai-powered-chatbots" target="_blank" class="underline">Evolution of Banking with AI Chatbots – ADA Global</a></li>
     </ol>
+  </div>
 
-      <script>
+  <!-- Chart script aligned with genai.html -->
+  <script>
+    // Single-topic point mirroring the structure from genai.html
     const topicData = [
-      { name: "Generative AI & Conversational Banking", disruption: 9, readiness: 8, relevance: 9 }
+      { name: "AI Personalization in Banking", disruption: 8.5, readiness: 8, relevance: 9 }
     ];
 
     const colorForRelevance = (r) => {
@@ -157,8 +161,5 @@
       }
     });
   </script>
-
-    
-  </div>
 </body>
 </html>
