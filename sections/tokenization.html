@@ -6,6 +6,7 @@
   <title>Tokenization of Assets</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-black text-white font-[Inter]">
   <div class="p-6 space-y-6">
@@ -89,6 +90,51 @@
       <li><strong>Cross-Border Tokenized Trade Finance</strong>: Build blockchain infrastructure enabling tokenized letters of credit and trade documents for CEE–EU trade corridors, reducing settlement times and costs.</li>
     </ul>
 
+    <!-- === Topic Evaluation Chart === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: Tokenization of Assets</h3>
+      <div class="h-64">
+        <canvas id="topicChart"></canvas>
+      </div>
+      <div class="mt-3 text-xs text-zinc-400">
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-green-500"></span> High relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span> Medium relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-red-500"></span> Low relevance</div>
+      </div>
+      <details class="mt-3 text-xs text-zinc-400">
+        <summary class="cursor-pointer text-zinc-300">How we score</summary>
+        <div class="mt-2 leading-5">
+          Risk of disruption: 1–10 (external threat level)<br/>
+          Execution readiness: 1–10 (feasibility to ship in ≤12 months)<br/>
+          Color = customer relevance (green/orange/red)
+        </div>
+      </details>
+    </div>
+
+    <!-- === Personal Recommendations === -->
+    <section class="bg-zinc-900 p-5 rounded-lg mt-6">
+      <h2 class="text-2xl font-semibold">Personal Recommendations</h2>
+      <div class="mt-3 text-zinc-200 leading-relaxed space-y-3">
+        <p>
+          Treat tokenization as a multi‑year infrastructure play, not a marketing feature. Start where frictions are biggest: private credit, trade finance, and fund distribution. Focus on benefits customers actually feel — faster settlement, fractional access, higher transparency — while keeping the blockchain plumbing invisible.
+        </p>
+        <p>
+          Build for interoperability and compliance from day one (custody model, transfer restrictions, chain selection, on/off‑ramps, MiCA alignment where relevant). Stand up a narrow, regulated pilot (e.g., tokenized money‑market fund shares or SME invoices) with clear success metrics, then scale horizontally into adjacent asset classes.
+        </p>
+        <p>
+          Even if the strongest use cases aren’t visible in everyday banking yet, tokenization is <strong>the likely future of financial management</strong>. It’s a long game — and the right time to experiment. Begin with pragmatic proofs of concept such as a <strong>tokenized bond</strong> or a <strong>tokenized deposit</strong> to validate custody, compliance, and ops. We can keep iterating toward production as standards and market demand mature.
+        </p>
+      </div>
+    </section>
+
+    <!-- === Deep dive button OUTSIDE recommendations container, left-aligned === -->
+    <div class="mt-4 flex justify-start">
+      <a href="tokenization-deep-dive.html"
+         class="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black">
+        Deep dive
+      </a>
+    </div>
+
     <h2 class="text-2xl font-semibold">Sources</h2>
     <ol start="106" class="list-decimal ml-6 text-blue-400 space-y-1">
       <li id="source106"><a href="https://www.cnbc.com/2025/04/12/tokenization-stock-bond-real-estate-trading-market-coming-blackrock.html" target="_blank" class="underline">Tokenization of the market coming if we fix one problem — CNBC</a></li>
@@ -102,5 +148,69 @@
       <li id="source114"><a href="https://www.desilvalawoffices.com/articles/blog/2025/june/blockchain-and-tokenization-the-future-of-collat/" target="_blank" class="underline">Blockchain &amp; Tokenization: Transforming Collateral Management — De Silva Law Offices</a></li>
     </ol>
   </div>
+
+  <script>
+    // === Chart data (your call: Disruption 5, Readiness 2, Relevance = Orange -> numeric 6) ===
+    const topicData = [
+      { name: "Tokenization of Assets", disruption: 5, readiness: 2, relevance: 6 }
+    ];
+
+    const colorForRelevance = (r) => {
+      if (r >= 8) return "#22C55E"; // green
+      if (r >= 6) return "#F59E0B"; // orange
+      return "#EF4444"; // red
+    };
+
+    const datasets = topicData.map(t => ({
+      label: t.name,
+      data: [{ x: t.disruption, y: t.readiness }],
+      pointBackgroundColor: colorForRelevance(t.relevance),
+      pointBorderColor: "#1F2937",
+      pointBorderWidth: 1.5,
+      pointRadius: 8,
+      pointHoverRadius: 9.5,
+    }));
+
+    new Chart(document.getElementById("topicChart").getContext("2d"), {
+      type: "scatter",
+      data: { datasets },
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "#0B0B0C",
+            titleColor: "#fff",
+            bodyColor: "#D4D4D8",
+            padding: 10,
+            callbacks: {
+              label: (ctx) => {
+                const t = topicData[ctx.datasetIndex];
+                const relLabel = t.relevance >= 8 ? "High (Green)" : t.relevance >= 6 ? "Medium (Orange)" : "Low (Red)";
+                return [
+                  t.name,
+                  `Disruption risk: ${t.disruption}/10`,
+                  `Execution readiness: ${t.readiness}/10`,
+                  `Customer relevance: ${t.relevance}/10 — ${relLabel}`
+                ];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            min: 1, max: 10,
+            title: { display: true, text: "Risk of Disruption", color: "#9CA3AF" },
+            grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" }
+          },
+          y: {
+            min: 1, max: 10,
+            title: { display: true, text: "Execution Readiness (≤12 mo)", color: "#9CA3AF" },
+            grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
