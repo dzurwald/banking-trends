@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Beyond Banking</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-[Inter]">
   <div class="p-6 space-y-6">
@@ -86,12 +86,53 @@
 
     <h2 class="text-2xl font-semibold">Personal Recommendation</h2>
     <p class="text-lg">
-      Beyond banking is increasingly growing and will be an important part of customers’ everyday life. We are not only seeing banking embedded into products, platforms, apps, or digital services—we are also seeing banks shifting towards non-bank offerings to horizontally scale, as seen with Kakao Bank in South Korea or Royal Bank of Canada’s acquisition of SmartReno. The goal is simple: be part of everyday life. The competitive landscape is shifting from bank vs. bank to product vs. product, and feature vs. feature. Banks have the capabilities to deliver non-banking products—we have proven it before. To succeed, banks must identify high-frequency, high-value life moments and build solutions around them, leveraging their trust advantage while expanding relevance.
+      Beyond banking is rapidly becoming an integral part of customers’ everyday lives. We are not only seeing financial services embedded into products, platforms, and digital ecosystems, but also banks moving horizontally into entirely new domains—such as <strong>Kakao Bank in South Korea</strong> branching into lifestyle services, or <strong>Royal Bank of Canada</strong> acquiring SmartReno to enter the home improvement market. The competitive battlefield is no longer “bank vs. bank” but “product vs. product” and “feature vs. feature.” 
+      <br/><br/>
+      Banks have the capabilities to deliver non-banking services—we have seen it in the past—and the winners will be those who use this capability to integrate deeply into customers’ daily routines. This means not just reacting to trends but shaping them through partnerships, innovation labs, and a strong ecosystem mindset. The smartest players will not only create new revenue streams but also embed themselves so deeply that switching becomes unthinkable.
     </p>
 
+    <!-- Chart -->
     <div class="bg-gray-900 p-4 rounded-lg">
-      <canvas id="beyondBankingChart" class="w-full h-64"></canvas>
+      <canvas id="beyondBankingChart" height="120"></canvas>
     </div>
+    <script>
+      const ctxBB = document.getElementById('beyondBankingChart').getContext('2d');
+      new Chart(ctxBB, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Beyond Banking',
+            data: [{ x: 4, y: 4 }],
+            backgroundColor: (() => {
+              const relevance = 'orange';
+              if (relevance === 'green') return 'rgba(0, 200, 0, 0.7)';
+              if (relevance === 'orange') return 'rgba(255, 165, 0, 0.7)';
+              return 'rgba(200, 0, 0, 0.7)';
+            })(),
+            pointRadius: 12
+          }]
+        },
+        options: {
+          scales: {
+            x: {
+              min: 0, max: 10,
+              grid: { color: 'rgba(255,255,255,0.1)' },
+              ticks: { color: '#fff', stepSize: 1 },
+              title: { display: true, text: 'Risk of Disruption', color: '#fff' }
+            },
+            y: {
+              min: 0, max: 10,
+              grid: { color: 'rgba(255,255,255,0.1)' },
+              ticks: { color: '#fff', stepSize: 1 },
+              title: { display: true, text: 'Execution Readiness', color: '#fff' }
+            }
+          },
+          plugins: {
+            legend: { display: false }
+          }
+        }
+      });
+    </script>
 
     <h2 class="text-2xl font-semibold">Sources</h2>
     <ol start="124" class="list-decimal ml-6 text-blue-400 space-y-1">
@@ -105,45 +146,5 @@
       <li id="source131"><a href="https://group.intesasanpaolo.com/en/newsroom/news/all-news/2020/intesa-sanpaolo-launches-xme-salute" target="_blank" class="underline">Intesa Sanpaolo’s XME Salute</a></li>
     </ol>
   </div>
-
-  <script>
-    const ctx = document.getElementById('beyondBankingChart').getContext('2d');
-    new Chart(ctx, {
-      type: 'scatter',
-      data: {
-        datasets: [{
-          label: 'Beyond Banking',
-          data: [{ x: 4, y: 4, r: 12 }],
-          backgroundColor: 'orange',
-          pointStyle: 'circle',
-          pointRadius: 12
-        }]
-      },
-      options: {
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: ctx => `Risk of Disruption: ${ctx.raw.x}, Execution Readiness: ${ctx.raw.y}`
-            }
-          }
-        },
-        scales: {
-          x: {
-            min: 0, max: 10,
-            grid: { color: 'rgba(255,255,255,0.1)' },
-            title: { display: true, text: 'Risk of Disruption', color: 'white' },
-            ticks: { color: 'white' }
-          },
-          y: {
-            min: 0, max: 10,
-            grid: { color: 'rgba(255,255,255,0.1)' },
-            title: { display: true, text: 'Execution Readiness', color: 'white' },
-            ticks: { color: 'white' }
-          }
-        }
-      }
-    });
-  </script>
 </body>
 </html>
