@@ -6,6 +6,7 @@
   <title>Beyond Banking</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-black text-white font-[Inter]">
   <div class="p-6 space-y-6">
@@ -82,6 +83,45 @@
       <li><strong>Green Living Platform</strong>: Offer subsidies, grants, and loans for solar panels and energy retrofits—bundled with CO₂ tracking dashboards.</li>
       <li><strong>Youth Education Stack</strong>: Build embedded education micro-loans, scholarship finders, and job prep tools for students.</li>
     </ul>
+
+    <h2 class="text-2xl font-semibold">Personal Recommendation</h2>
+    <p class="text-lg">
+      Beyond banking is rapidly becoming an essential component of customers’ everyday lives. Not only are we seeing financial services embedded into products, platforms, and apps, but we also see banks moving horizontally into non-banking domains—such as Kakao Bank in South Korea, or RBC’s acquisition of SmartReno—to secure broader lifestyle integration. The competitive battlefield is shifting from bank vs. bank to product vs. product, and feature vs. feature. Banks have the operational and regulatory capabilities to deliver non-banking services, and history proves they can adapt. 
+      <strong>Smart move:</strong> develop partnerships with lifestyle brands and technology providers to co-create integrated services, making the bank a daily companion rather than an occasional necessity.
+    </p>
+
+    <h2 class="text-2xl font-semibold">Ratings</h2>
+    <canvas id="ratingsChart" width="400" height="300"></canvas>
+    <script>
+      const ctx = document.getElementById('ratingsChart').getContext('2d');
+      const ratingsChart = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+          datasets: [{
+            label: 'Beyond Banking',
+            data: [{ x: 4, y: 4, r: 12 }],
+            backgroundColor: 'orange',
+            borderColor: 'white',
+            borderWidth: 2
+          }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: {
+            x: {
+              min: 0, max: 10, grid: { color: '#444' },
+              title: { display: true, text: 'Risk of Disruption', color: 'white' },
+              ticks: { color: 'white' }
+            },
+            y: {
+              min: 0, max: 10, grid: { color: '#444' },
+              title: { display: true, text: 'Execution Readiness', color: 'white' },
+              ticks: { color: 'white' }
+            }
+          }
+        }
+      });
+    </script>
 
     <h2 class="text-2xl font-semibold">Sources</h2>
     <ol start="124" class="list-decimal ml-6 text-blue-400 space-y-1">
