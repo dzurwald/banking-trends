@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Embedded Finance</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-[Inter]">
@@ -63,6 +64,51 @@
       </li>
     </ul>
 
+    <!-- === Topic Evaluation Chart (scatter) === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: Embedded Finance</h3>
+      <div class="h-64">
+        <canvas id="topicChart"></canvas>
+      </div>
+      <div class="mt-3 text-xs text-zinc-400">
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-green-500"></span> High relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span> Medium relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-red-500"></span> Low relevance</div>
+      </div>
+      <details class="mt-3 text-xs text-zinc-400">
+        <summary class="cursor-pointer text-zinc-300">How we score</summary>
+        <div class="mt-2 leading-5">
+          Risk of disruption: 1–10 (external threat level)<br/>
+          Execution readiness: 1–10 (feasibility to ship in ≤12 months)<br/>
+          Color = customer relevance (green/orange/red)
+        </div>
+      </details>
+    </div>
+
+    <!-- === Personal Recommendation === -->
+    <section class="bg-zinc-900 p-5 rounded-lg mt-6">
+      <h2 class="text-2xl font-semibold">Personal Recommendation</h2>
+      <div class="mt-3 text-zinc-200 leading-relaxed space-y-3">
+        <p>
+          Embedded finance is not a fad — it’s a structural shift in how customers expect to interact with financial services. In a CEE banking context, it will be less about “launching yet another app” and more about <strong>becoming part of someone else’s customer journey</strong>. If our clients are already spending hours inside an e‑commerce platform, a mobility app, or a healthcare portal, the bank should be there too — invisible, seamless, and indispensable.
+        </p>
+        <p>
+          For regional banks, the priority is to <strong>choose the right verticals</strong> rather than chasing every integration. B2B platforms, gig‑economy hubs, and large retail ecosystems can be low‑friction starting points. The model is scalable: once the first integration proves ROI, it becomes much easier to pitch the next.
+        </p>
+        <p>
+          The risk is falling into a <strong>white‑label trap</strong> — providing the infrastructure but not the customer relationship. The winning strategy will combine embedded reach with <strong>branded experiences</strong> and value‑adds (e.g., analytics, loyalty, personalized offers).
+        </p>
+      </div>
+    </section>
+
+    <!-- Deep dive button (outside the recommendation container, left-aligned) -->
+    <div class="mt-4 flex justify-start">
+      <a href="embedded-finance-deep-dive.html"
+         class="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black">
+        Deep dive
+      </a>
+    </div>
+
     <h2 class="text-2xl font-semibold">Articles Worth Mentioning</h2>
     <ul class="list-disc ml-6 text-blue-400">
       <li>The Rise of Embedded Finance: New Opportunities for Banks
@@ -103,11 +149,73 @@
       <li id="source121"><a href="https://synctera.com/post/guide-to-projecting-revenue-from-embedded-banking-products" target="_blank" class="underline">Guide to Projecting Revenue from Embedded Banking Products — Synctera</a></li>
       <li id="source122"><a href="https://www.mckinsey.com/industries/financial-services/our-insights/embedded-finance-the-choices-and-trade-offs-for-us-banks" target="_blank" class="underline">Embedded finance: The choices and trade-offs for US banks — McKinsey</a></li>
       <li id="source123"><a href="https://www.americanbanker.com/payments/news/u-s-bank-key-discuss-embedded-payments-with-american-banker" target="_blank" class="underline">How “Uberization” drives embedded payments — American Banker</a></li>
-
-      <!-- Articles worth mentioning (additional refs) -->
       <li id="source160"><a href="https://euronetsoftware.com/embedded-finance-new-opportunities/" target="_blank" class="underline">The Rise of Embedded Finance: New Opportunities for Banks — Euronet Software</a></li>
       <li id="source234"><a href="https://www.fundthrough.com/blog/ask-fundthrough/top-13-embedded-finance-use-cases/" target="_blank" class="underline">Top 13 Embedded Finance Use Cases — FundThrough</a></li>
     </ol>
   </div>
+
+  <script>
+    // Scatter chart: Disruption 7, Readiness 7, Relevance = Green (numeric 9)
+    const topicData = [
+      { name: "Embedded Finance", disruption: 7, readiness: 7, relevance: 9 }
+    ];
+
+    const colorForRelevance = (r) => {
+      if (r >= 8) return "#22C55E"; // green
+      if (r >= 6) return "#F59E0B"; // orange
+      return "#EF4444"; // red
+    };
+
+    const datasets = topicData.map(t => ({
+      label: t.name,
+      data: [{ x: t.disruption, y: t.readiness }],
+      pointBackgroundColor: colorForRelevance(t.relevance),
+      pointBorderColor: "#1F2937",
+      pointBorderWidth: 1.5,
+      pointRadius: 8,
+      pointHoverRadius: 9.5,
+    }));
+
+    new Chart(document.getElementById("topicChart").getContext("2d"), {
+      type: "scatter",
+      data: { datasets },
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "#0B0B0C",
+            titleColor: "#fff",
+            bodyColor: "#D4D4D8",
+            padding: 10,
+            callbacks: {
+              label: (ctx) => {
+                const t = topicData[ctx.datasetIndex];
+                const relLabel = t.relevance >= 8 ? "High (Green)" : t.relevance >= 6 ? "Medium (Orange)" : "Low (Red)";
+                return [
+                  t.name,
+                  `Disruption risk: ${t.disruption}/10`,
+                  `Execution readiness: ${t.readiness}/10`,
+                  `Customer relevance: ${t.relevance}/10 — ${relLabel}`
+                ];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            min: 1, max: 10,
+            title: { display: true, text: "Risk of Disruption", color: "#9CA3AF" },
+            grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" }
+          },
+          y: {
+            min: 1, max: 10,
+            title: { display: true, text: "Execution Readiness (≤12 mo)", color: "#9CA3AF" },
+            grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
