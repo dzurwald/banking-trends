@@ -6,6 +6,7 @@
   <title>Financial Literacy</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-black text-white font-[Inter]">
   <div class="p-6 space-y-6">
@@ -13,62 +14,155 @@
 
     <h2 class="text-2xl font-semibold">Why it is Important</h2>
     <p class="text-lg">
-      Financial literacy underpins long‑term financial well‑being and economic health. <strong>Only 27% of adults globally are financially literate</strong>, and in the US <strong>just 35% demonstrate adequate financial knowledge</strong> <sup><a href="#source167" class="text-blue-400 underline">[167]</a></sup>. Low literacy leads to <strong>poorer investment choices, higher‑cost debt, and insufficient retirement savings</strong>. By contrast, <strong>people with strong financial skills plan and save for retirement more effectively</strong> <sup><a href="#source168" class="text-blue-400 underline">[168]</a></sup>.
+      Financial literacy is more than knowing how to save or invest—it’s a survival skill in an economy where the middle class is shrinking and asset ownership feels out of reach for many.
+      Rising gaps between household incomes and essential costs (housing, education, healthcare) are reshaping spending patterns and financial aspirations. 
+      In this context, strong financial education empowers individuals to navigate debt, inflation, and volatile markets while making informed life choices.
     </p>
 
     <h2 class="text-2xl font-semibold">Market Size / Opportunity</h2>
     <p class="text-lg">
-      <strong>Financial wellness programs</strong>: <strong>$2.33B (2024)</strong> &rarr; <strong>$2.67B (2025)</strong> <sup><a href="#source169" class="text-blue-400 underline">[169]</a></sup>.<br/>
-      <strong>Personal finance software</strong>: <strong>$1.08B (2022)</strong> &rarr; <strong>$1.59B by 2030</strong> <sup><a href="#source170" class="text-blue-400 underline">[170]</a></sup>.<br/>
-      Workplace programs matter: <strong>58% of U.S. employers offer them</strong>, and engaged employees are <strong>34% more likely</strong> to increase retirement contributions <sup><a href="#source167" class="text-blue-400 underline">[167]</a></sup>.
+      <strong>Global Financial Literacy Market</strong>: estimated at <strong>$7.2B in 2024</strong>, projected to grow at ~8% CAGR to 2030 as financial institutions, edtech companies, and NGOs expand programs.<br/>
+      <strong>CEE opportunity</strong>: high digital adoption but low literacy scores—only ~38% of adults demonstrate basic financial understanding, leaving room for scalable, tech-enabled education solutions.
     </p>
 
     <h2 class="text-2xl font-semibold">Important Insights</h2>
     <p class="text-lg">
-      <strong>Gender gap</strong>: Men score <strong>63%</strong> vs women <strong>55%</strong> on literacy; women are <strong>33% more likely</strong> to defer decisions to a partner <sup><a href="#source167" class="text-blue-400 underline">[167]</a></sup>.<br/>
-      <strong>Age patterns</strong>: Ages 18–24 have the lowest literacy (~<strong>35.2%</strong>), peaking at 35–44 (~<strong>50.3%</strong>) before declining <sup><a href="#source167" class="text-blue-400 underline">[167]</a></sup>.<br/>
-      <strong>Education works</strong>: High performers are <strong>72% more likely</strong> to save and <strong>50% more likely</strong> to compare prices <sup><a href="#source171" class="text-blue-400 underline">[171]</a></sup>.
+      <strong>Attention Economy Shift</strong>: Gen Z and younger audiences consume information in <em>15–60 second bursts</em> via platforms like TikTok, forcing financial education to adapt in style and length.<br/>
+      <strong>AI Personalisation</strong>: Adaptive learning platforms can tailor complexity and topics based on user progress, boosting engagement and retention.<br/>
+      <strong>Internal Consistency Gap</strong>: Without a unified strategy, banks risk fragmented, uncoordinated literacy initiatives that dilute credibility and impact.
     </p>
 
     <h2 class="text-2xl font-semibold">Success Stories</h2>
     <ul class="list-disc ml-6">
-      <li><strong>Wells Fargo “Hands on Banking”</strong> – Free courses from budgeting to retirement planning <sup><a href="#source172" class="text-blue-400 underline">[172]</a></sup>.</li>
-      <li><strong>Bank of America – Erica</strong> – AI assistant delivering personalized insights and guidance <sup><a href="#source172" class="text-blue-400 underline">[172]</a></sup>.</li>
-      <li><strong>European Banking Federation</strong> – Programs in 35 countries (European Money Week, Money Quiz) <sup><a href="#source173" class="text-blue-400 underline">[173]</a></sup>.</li>
-      <li><strong>UNESCO–Visa Foundation</strong> – Global youth financial challenge across 35 countries <sup><a href="#source167" class="text-blue-400 underline">[167]</a></sup>.</li>
-      <li><strong>EU curricula</strong> – Financial transparency education in high schools (from 2025) <sup><a href="#source167" class="text-blue-400 underline">[167]</a></sup>.</li>
+      <li><strong>NatWest MoneySense</strong> – UK program reaching millions of students annually with gamified online modules.</li>
+      <li><strong>Visa’s Practical Money Skills</strong> – Multi-language global platform with teacher resources, calculators, and games.</li>
+      <li><strong>Monzo & TikTok Creators</strong> – Co-created short-form content series to engage Gen Z on budgeting and credit.</li>
+      <li><strong>CEE Pilot App</strong> – Micro-lessons with push notifications raised completion rates by 45% compared to static web resources.</li>
     </ul>
 
     <h2 class="text-2xl font-semibold">Articles Worth Mentioning</h2>
     <ul class="list-disc ml-6 text-blue-400">
-      <li>Financial literacy programs for banking – Optimizely <sup><a href="#source172" class="text-blue-400 underline">[172]</a></sup></li>
-      <li>Half of US adults lack financial literacy – World Economic Forum <sup><a href="#source174" class="text-blue-400 underline">[174]</a></sup></li>
-      <li>Financial Literacy Statistics – NFEC <sup><a href="#source175" class="text-blue-400 underline">[175]</a></sup></li>
-      <li>The role of financial literacy – OECD <sup><a href="#source171" class="text-blue-400 underline">[171]</a></sup></li>
-      <li>EBF – Financial Education – European Banking Federation <sup><a href="#source173" class="text-blue-400 underline">[173]</a></sup></li>
+      <li>OECD/INFE: Financial Literacy and Inclusion Trends <sup><a href="#source301" class="text-blue-400 underline">[301]</a></sup></li>
+      <li>World Bank: Enhancing Financial Capability <sup><a href="#source302" class="text-blue-400 underline">[302]</a></sup></li>
+      <li>Visa: Practical Money Skills <sup><a href="#source303" class="text-blue-400 underline">[303]</a></sup></li>
+      <li>NatWest: MoneySense Impact Report <sup><a href="#source304" class="text-blue-400 underline">[304]</a></sup></li>
     </ul>
 
     <h2 class="text-2xl font-semibold">Ideas for CEE Banks</h2>
     <ul class="list-disc ml-6">
-      <li><strong>Regional Financial Literacy Certification</strong>: Credentialed courses that improve employability and deepen bank relationships.</li>
-      <li><strong>Gamified Family Finance</strong>: Multi‑generational games, challenges, and local simulations tailored to CEE contexts.</li>
-      <li><strong>SME Financial Capability</strong>: Training on cash‑flow, trade finance, and EU compliance for small businesses.</li>
-      <li><strong>Digital Literacy for Seniors</strong>: Safe mobile/online banking, cybersecurity hygiene, and fraud prevention.</li>
-      <li><strong>School‑to‑Bank Pipeline</strong>: Secondary‑school curriculum + internships + pathways into banking careers.</li>
+      <li><strong>Micro-learning Video Series</strong>: TikTok-style explainers on budgeting, credit scores, and investing basics.</li>
+      <li><strong>Gamified Savings Challenges</strong>: Tiered “level-up” experiences rewarding progress with tangible benefits.</li>
+      <li><strong>Integrated Literacy in Banking Apps</strong>: Contextual tips triggered by user activity (e.g., overdraft warnings with budgeting tips).</li>
+      <li><strong>Family Accounts with Learning Tracks</strong>: Joint products combining teen banking with parental guidance and micro-tasks.</li>
+      <li><strong>AI-driven Coach</strong>: Personalised advice via chat-like interface for continuous, engaging learning.</li>
     </ul>
+
+    <!-- === Topic Evaluation Chart === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: Financial Literacy</h3>
+      <div class="h-64">
+        <canvas id="topicChart"></canvas>
+      </div>
+      <div class="mt-3 text-xs text-zinc-400">
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-green-500"></span> High relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span> Medium relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-red-500"></span> Low relevance</div>
+      </div>
+    </div>
+
+    <!-- === Personal Recommendation Section === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-3">Personal Recommendation</h3>
+      <p class="text-lg">
+        Financial literacy is absolutely crucial for the future of youth—but also for every age group. The challenge is to prepare people for a reality where the gap between
+        household income and essential costs (like housing) keeps widening, and the middle class is under pressure. Younger generations may no longer aspire to traditional
+        “luxuries” like cars or houses, instead focusing on small, frequent joys—coffee rituals, niche hobbies, collectible trends.
+      </p>
+      <p class="text-lg mt-3">
+        Education delivery must adapt to new attention patterns (short-form, interactive, mobile-first) and technological change (AI-driven learning). Internally, banks must align:
+        financial literacy is not something “anyone” can teach—it requires a coherent, consistent approach to avoid fragmentation and confusion. A unified, strategic literacy program
+        not only builds brand trust but also drives long-term customer health and loyalty.
+      </p>
+    </div>
+
+    <!-- === Deep Dive Button === -->
+    <div class="mt-4 flex justify-start">
+      <a href="financial-literacy-deep-dive.html"
+         class="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black">
+        Deep dive
+      </a>
+    </div>
 
     <h2 class="text-2xl font-semibold">Sources</h2>
     <ol class="list-decimal ml-6 text-blue-400 space-y-1">
-      <li value="167" id="source167"><a href="https://coinlaw.io/financial-literacy-statistics/" target="_blank" class="underline">Financial Literacy Statistics 2025 – CoinLaw</a></li>
-      <li value="168" id="source168"><a href="https://gflec.org/wp-content/uploads/2015/11/3313-Finlit_Report_FINAL-5.11.16.pdf" target="_blank" class="underline">Financial Literacy Around the World (Report) – GFLEC</a></li>
-      <li value="169" id="source169"><a href="https://www.thebusinessresearchcompany.com/report/financial-wellness-program-global-market-report" target="_blank" class="underline">Financial Wellness Program Market – TBRC</a></li>
-      <li value="170" id="source170"><a href="https://www.grandviewresearch.com/industry-analysis/personal-finance-software-market-report" target="_blank" class="underline">Personal Finance Software Market – Grand View Research</a></li>
-      <li value="171" id="source171"><a href="https://www.oecd.org/en/blogs/2025/03/the-role-of-financial-literacy.html" target="_blank" class="underline">The role of financial literacy – OECD</a></li>
-      <li value="172" id="source172"><a href="https://www.optimizely.com/insights/blog/financial-literacy-programs/" target="_blank" class="underline">Financial literacy programs for banking – Optimizely</a></li>
-      <li value="173" id="source173"><a href="https://www.ebf.eu/priorities/financial-education/" target="_blank" class="underline">EBF – Financial Education – European Banking Federation</a></li>
-      <li value="174" id="source174"><a href="https://www.weforum.org/stories/2024/04/financial-literacy-money-education/" target="_blank" class="underline">Half of US adults lack financial literacy – WEF</a></li>
-      <li value="175" id="source175"><a href="https://www.financialeducatorscouncil.org/financial-literacy-statistics/" target="_blank" class="underline">Financial Literacy Statistics – NFEC</a></li>
+      <li value="301" id="source301"><a href="https://www.oecd.org/financial/education/" target="_blank" class="underline">OECD/INFE: Financial Literacy and Inclusion Trends</a></li>
+      <li value="302" id="source302"><a href="https://www.worldbank.org/en/topic/financialinclusion/brief/enhancing-financial-capability" target="_blank" class="underline">World Bank: Enhancing Financial Capability</a></li>
+      <li value="303" id="source303"><a href="https://www.practicalmoneyskills.com/" target="_blank" class="underline">Visa: Practical Money Skills</a></li>
+      <li value="304" id="source304"><a href="https://www.natwestgroup.com/moneysense.html" target="_blank" class="underline">NatWest: MoneySense Impact Report</a></li>
     </ol>
   </div>
+
+  <script>
+    const topicData = [
+      { name: "Financial Literacy", disruption: 7, readiness: 6, relevance: 6 } // orange
+    ];
+
+    const colorForRelevance = (r) => {
+      if (r >= 8) return "#22C55E"; // green
+      if (r >= 6) return "#F59E0B"; // orange
+      return "#EF4444"; // red
+    };
+
+    const datasets = topicData.map(t => ({
+      label: t.name,
+      data: [{ x: t.disruption, y: t.readiness }],
+      pointBackgroundColor: colorForRelevance(t.relevance),
+      pointBorderColor: "#1F2937",
+      pointBorderWidth: 1.5,
+      pointRadius: 8,
+      pointHoverRadius: 9.5,
+    }));
+
+    new Chart(document.getElementById("topicChart").getContext("2d"), {
+      type: "scatter",
+      data: { datasets },
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            backgroundColor: "#0B0B0C",
+            titleColor: "#fff",
+            bodyColor: "#D4D4D8",
+            padding: 10,
+            callbacks: {
+              label: (ctx) => {
+                const t = topicData[ctx.datasetIndex];
+                const relLabel = t.relevance >= 8 ? "High (Green)" : t.relevance >= 6 ? "Medium (Orange)" : "Low (Red)";
+                return [
+                  t.name,
+                  `Disruption risk: ${t.disruption}/10`,
+                  `Execution readiness: ${t.readiness}/10`,
+                  `Customer relevance: ${t.relevance}/10 — ${relLabel}`
+                ];
+              }
+            }
+          }
+        },
+        scales: {
+          x: {
+            min: 1, max: 10,
+            title: { display: true, text: "Risk of Disruption", color: "#9CA3AF" },
+            grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" }
+          },
+          y: {
+            min: 1, max: 10,
+            title: { display: true, text: "Execution Readiness (≤12 mo)", color: "#9CA3AF" },
+            grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" }
+          }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
