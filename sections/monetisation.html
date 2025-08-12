@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Monetisation of Internal Capabilities</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body class="bg-black text-white font-[Inter]">
   <div class="p-6 space-y-6">
@@ -13,7 +14,7 @@
 
     <h2 class="text-2xl font-semibold">Why it is Important</h2>
     <p class="text-lg">
-      The monetization of internal capabilities represents a paradigm shift where banks transform IT from a cost center into a revenue engine. <strong>Banks can increase revenue 1–2% through data monetization</strong>—for large institutions, that’s billions in new income streams <sup><a href="#source156" class="text-blue-400 underline">[156]</a></sup>. This leverages unique data assets, tech infrastructure, and regulatory expertise to create new product lines. <strong>Revolut’s People platform</strong> is a showcase: it began as an internal HR tool and evolved into a comprehensive B2B product <sup><a href="#source157" class="text-blue-400 underline">[157]</a><a href="#source158" class="text-blue-400 underline ml-1">[158]</a></sup>, proving how in‑house capabilities can become external revenue streams.
+      The monetization of internal capabilities represents a paradigm shift where banks transform IT from a cost center into a revenue engine. <strong>Banks can increase revenue 1–2% through data monetization</strong>—for large institutions, that’s billions in new income streams <sup><a href="#source156" class="text-blue-400 underline">[156]</a></sup>. This leverages unique data assets, tech infrastructure, and regulatory expertise to create new product lines. <strong>Revolut’s People platform</strong> is a showcase: it began as an internal HR tool and evolved into a comprehensive B2B product <sup><a href="#source157" class="text-blue-400 underline">[157]</a><a href="#source158" class="text-blue-400 underline ml-1">[158]</a></sup>, proving how in-house capabilities can become external revenue streams.
     </p>
 
     <h2 class="text-2xl font-semibold">Market Size / Opportunity</h2>
@@ -26,17 +27,17 @@
 
     <h2 class="text-2xl font-semibold">Important Insights</h2>
     <p class="text-lg">
-      <strong>Data‑centric transformation</strong>: Banks must shift from digital enablement to <em>data monetization</em>, creating internal data marketplaces and external API products <sup><a href="#source159" class="text-blue-400 underline">[159]</a></sup>.
+      <strong>Data-centric transformation</strong>: Banks must shift from digital enablement to <em>data monetization</em>, creating internal data marketplaces and external API products <sup><a href="#source159" class="text-blue-400 underline">[159]</a></sup>.
       <br/><strong>Platform strategy</strong>: <strong>Revolut People</strong> scaled from an internal tool for ~600 staff to a platform supporting 10,000+ employees—then externalized for B2B clients <sup><a href="#source157" class="text-blue-400 underline">[157]</a></sup>.
       <br/><strong>Regulatory advantage</strong>: Existing compliance and risk frameworks give banks a moat when offering capabilities via BaaS/partner channels <sup><a href="#source160" class="text-blue-400 underline">[160]</a></sup>.
     </p>
 
     <h2 class="text-2xl font-semibold">Success Stories</h2>
     <ul class="list-disc ml-6">
-      <li><strong>Revolut People Platform</strong> – Internal HR solution evolved into an AI‑driven talent platform offered to external clients <sup><a href="#source157" class="text-blue-400 underline">[157]</a><a href="#source158" class="text-blue-400 underline ml-1">[158]</a></sup>.</li>
+      <li><strong>Revolut People Platform</strong> – Internal HR solution evolved into an AI-driven talent platform offered to external clients <sup><a href="#source157" class="text-blue-400 underline">[157]</a><a href="#source158" class="text-blue-400 underline ml-1">[158]</a></sup>.</li>
       <li><strong>JPMorgan Chase</strong> – Enterprise data strategy prioritizing AI and fraud prevention to drive productivity and new value capture <sup><a href="#source156" class="text-blue-400 underline">[156]</a></sup>.</li>
       <li><strong>European Bank (Data Analytics)</strong> – Generated <strong>$12M+</strong> annually by selling subscription analytics to external clients <sup><a href="#source161" class="text-blue-400 underline">[161]</a></sup>.</li>
-      <li><strong>Keyrus‑led Initiative</strong> – Built internal data marketplaces and external API services while staying compliant <sup><a href="#source159" class="text-blue-400 underline">[159]</a></sup>.</li>
+      <li><strong>Keyrus-led Initiative</strong> – Built internal data marketplaces and external API services while staying compliant <sup><a href="#source159" class="text-blue-400 underline">[159]</a></sup>.</li>
       <li><strong>Asian Bank (Consumer Insights)</strong> – Earned <strong>$15M</strong> annually selling anonymized spending insights to partners and agencies <sup><a href="#source161" class="text-blue-400 underline">[161]</a></sup>.</li>
     </ul>
 
@@ -51,12 +52,45 @@
 
     <h2 class="text-2xl font-semibold">Ideas for CEE Banks</h2>
     <ul class="list-disc ml-6">
-      <li><strong>RegTech‑as‑a‑Service</strong>: Productize internal compliance/KYC/AML processes as services for fintechs and smaller FIs.</li>
+      <li><strong>RegTech-as-a-Service</strong>: Productize internal compliance/KYC/AML processes as services for fintechs and smaller FIs.</li>
       <li><strong>Risk Analytics Marketplace</strong>: Externalize credit scoring, fraud signals, and portfolio risk models via APIs.</li>
-      <li><strong>Banking‑as‑a‑Service</strong>: Offer core banking, cards, and payments rails to partners to launch products fast.</li>
-      <li><strong>AI‑Powered Advisory</strong>: Package internal ML models for robo‑advice and predictive insights for other institutions.</li>
-      <li><strong>Cross‑Border Payments Engine</strong>: Monetize FX, routing, and compliance tooling for CEE↔EU trade corridors.</li>
+      <li><strong>Banking-as-a-Service</strong>: Offer core banking, cards, and payments rails to partners to launch products fast.</li>
+      <li><strong>AI-Powered Advisory</strong>: Package internal ML models for robo-advice and predictive insights for other institutions.</li>
+      <li><strong>Cross-Border Payments Engine</strong>: Monetize FX, routing, and compliance tooling for CEE↔EU trade corridors.</li>
     </ul>
+
+    <!-- === Topic Evaluation Chart === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: Monetisation of Internal Capabilities</h3>
+      <div class="h-64">
+        <canvas id="topicChart"></canvas>
+      </div>
+      <div class="mt-3 text-xs text-zinc-400">
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-green-500"></span> High relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span> Medium relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-red-500"></span> Low relevance</div>
+      </div>
+    </div>
+
+    <!-- === Personal Recommendation Section === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-3">Personal Recommendation</h3>
+      <p class="text-lg">
+        We should treat our strongest internal capabilities as <strong>products</strong>, not just internal functions. Start where banks already lead and where market demand is proven: <strong>security, biometrics, digital identity &amp; KYC</strong>. Package these as APIs and workflows for SMEs, fintechs, marketplaces, and even public institutions. From there, expand into <strong>fraud signals, payments/FX rails, credit &amp; risk models, and anonymized data insights</strong>.
+        <br/><br/>
+        Banks can leverage <strong>idea management platforms</strong> to capture, refine, and prioritize opportunities from across the organization — turning small ideas into commercial offerings. Innovating the business model and finding new revenue streams from existing strengths is essential. These are products we already have; with one small pivot we could scale them. Why not use it?  
+        <br/><br/>
+        This approach aligns perfectly with <em>Beyond Banking</em> and horizontal scaling strategies. By monetizing internal capabilities, we diversify income, strengthen partnerships, and position the bank as a trusted infrastructure provider in the digital economy.
+      </p>
+    </div>
+
+    <!-- === Deep Dive Button === -->
+    <div class="mt-4 flex justify-start">
+      <a href="monetisation-internal-capabilities-deep-dive.html"
+         class="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black">
+        Deep dive
+      </a>
+    </div>
 
     <h2 class="text-2xl font-semibold">Sources</h2>
     <ol class="list-decimal ml-6 text-blue-400 space-y-1">
@@ -70,5 +104,40 @@
       <li value="161" id="source161"><a href="https://bluebik.com/insight/data-monetization-banking-sector/" target="_blank" class="underline">Data Monetization in Banking and Financial sector – Bluebik</a></li>
     </ol>
   </div>
+
+  <script>
+    const topicData = [
+      { name: "Monetisation of Internal Capabilities", disruption: 3, readiness: 2, relevance: 4 }
+    ];
+
+    const colorForRelevance = (r) => {
+      if (r >= 8) return "#22C55E"; // green
+      if (r >= 6) return "#F59E0B"; // orange
+      return "#EF4444"; // red
+    };
+
+    const datasets = topicData.map(t => ({
+      label: t.name,
+      data: [{ x: t.disruption, y: t.readiness }],
+      pointBackgroundColor: colorForRelevance(t.relevance),
+      pointBorderColor: "#1F2937",
+      pointBorderWidth: 1.5,
+      pointRadius: 8,
+      pointHoverRadius: 9.5,
+    }));
+
+    new Chart(document.getElementById("topicChart").getContext("2d"), {
+      type: "scatter",
+      data: { datasets },
+      options: {
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { min: 1, max: 10, title: { display: true, text: "Risk of Disruption", color: "#9CA3AF" }, grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" } },
+          y: { min: 1, max: 10, title: { display: true, text: "Execution Readiness (≤12 mo)", color: "#9CA3AF" }, grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" } }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
