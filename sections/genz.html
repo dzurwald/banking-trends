@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gen Z & Banking</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body class="bg-black text-white font-[Inter]">
@@ -61,6 +62,35 @@
       <li><strong>Micro-Investment Ecosystem</strong>: Auto-invest rounding into sustainable funds, local businesses, and P2P lending with social sharing.</li>
     </ul>
 
+    <!-- === Topic Evaluation Chart === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-4">Topic Evaluation: Gen Z &amp; Banking</h3>
+      <div class="h-64">
+        <canvas id="topicChart"></canvas>
+      </div>
+      <div class="mt-3 text-xs text-zinc-400">
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-green-500"></span> High relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-amber-500"></span> Medium relevance</div>
+        <div class="flex items-center gap-2"><span class="inline-block w-2 h-2 rounded-full bg-red-500"></span> Low relevance</div>
+      </div>
+    </div>
+
+    <!-- === Personal Recommendation Section === -->
+    <div class="bg-zinc-900 p-4 rounded-lg mt-6">
+      <h3 class="text-xl font-semibold mb-3">Personal Recommendation</h3>
+      <p class="text-lg">
+        Gen Z is already our most populous customer group—and we should act like it. Give them <strong>freedom to customize</strong> their banking experience, and the <strong>trust and tools</strong> to manage money smartly. Respect their values and move at the speed of culture: new ways of working, creators, communities, and side hustles. Above all, <strong>avoid cringe</strong>—tone‑deaf marketing kills credibility instantly. Let younger voices lead acquisition and creative; it shows. Travel is an identity marker for many, so think globally by default (cards, FX, travel perks). Don’t try to push them into what the bank wants—<strong>build what they want</strong>. Buying customers with sign‑up bonuses is a short‑term hack; <strong>they’ll stay for a product they love</strong>—smooth UX, saving pots, and chat‑like money flows they already enjoy. Listen first, then ship fast.
+      </p>
+    </div>
+
+    <!-- === Deep Dive Button (standalone) === -->
+    <div class="mt-4 flex justify-start">
+      <a href="genz-banking-deep-dive.html"
+         class="inline-flex items-center justify-center rounded-md bg-blue-500 px-4 py-2 text-sm font-semibold text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-black">
+        Deep dive
+      </a>
+    </div>
+
     <h2 class="text-2xl font-semibold">Sources</h2>
     <ol start="139" class="list-decimal ml-6 text-blue-400 space-y-1">
       <li id="source139"><a href="https://htec.com/insights/blogs/how-gen-z-is-reinventing-fintech-and-banking/" target="_blank" class="underline">How Gen Z is influencing fintech and banking — HTEC</a></li>
@@ -77,5 +107,40 @@
       <li id="source260"><a href="https://www.mastercard.com/us/en/news-and-trends/stories/2025/gen-z-innovation-banking.html" target="_blank" class="underline">How Gen Z is reshaping digital banking expectations — Mastercard</a></li>
     </ol>
   </div>
+
+  <script>
+    const topicData = [
+      { name: "Gen Z & Banking", disruption: 8, readiness: 6, relevance: 9 } // relevance=9 -> green
+    ];
+
+    const colorForRelevance = (r) => {
+      if (r >= 8) return "#22C55E"; // green
+      if (r >= 6) return "#F59E0B"; // orange
+      return "#EF4444"; // red
+    };
+
+    const datasets = topicData.map(t => ({
+      label: t.name,
+      data: [{ x: t.disruption, y: t.readiness }],
+      pointBackgroundColor: colorForRelevance(t.relevance),
+      pointBorderColor: "#1F2937",
+      pointBorderWidth: 1.5,
+      pointRadius: 8,
+      pointHoverRadius: 9.5,
+    }));
+
+    new Chart(document.getElementById("topicChart").getContext("2d"), {
+      type: "scatter",
+      data: { datasets },
+      options: {
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { min: 1, max: 10, title: { display: true, text: "Risk of Disruption", color: "#9CA3AF" }, grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" } },
+          y: { min: 1, max: 10, title: { display: true, text: "Execution Readiness (≤12 mo)", color: "#9CA3AF" }, grid: { color: "#27272A" }, ticks: { color: "#A1A1AA" } }
+        }
+      }
+    });
+  </script>
 </body>
 </html>
