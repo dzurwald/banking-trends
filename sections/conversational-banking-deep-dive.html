@@ -1,1 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deep Dive: Generative AI & Conversational Banking</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-[Inter]">
+  <div class="p-6 space-y-6 max-w-5xl mx-auto">
+    <!-- Back to overview -->
+    <div class="mt-2">
+      <a href="conversational-banking.html"
+         class="inline-flex items-center gap-2 rounded-md bg-zinc-800 px-3 py-2 text-sm font-semibold text-zinc-200 hover:bg-zinc-700 focus:outline-none focus:ring-2 focus:ring-zinc-500 focus:ring-offset-2 focus:ring-offset-black">
+        ← Back to overview
+      </a>
+    </div>
 
+    <h1 class="text-3xl font-bold">The Future of Banking: Generative AI and Conversational Banking — Deep Dive</h1>
+
+    <h2 class="text-2xl font-semibold">Executive Summary</h2>
+    <p class="text-lg">
+      The banking industry stands at a transformative inflection point. <strong>Generative AI and conversational banking are not merely technological upgrades—they represent a fundamental reimagining of how financial institutions interact with customers and operate their businesses</strong><sup><a href="#s1" class="text-blue-400 underline">[1]</a><a href="#s2" class="text-blue-400 underline ml-1">[2]</a></sup>. With the global generative AI market in banking projected to grow from <strong>$1.29 billion in 2024 to $21.57 billion by 2034</strong><sup><a href="#s3" class="text-blue-400 underline">[3]</a></sup>, and <strong>88% of banking executives believing conversational AI will soon be the primary customer interaction channel</strong><sup><a href="#s4" class="text-blue-400 underline">[4]</a></sup>, we are witnessing the dawn of a new banking era.
+    </p>
+    <!-- Optional chart slot (replace or remove) -->
+    <!-- <div class="bg-zinc-900 p-4 rounded-lg"><img src="chart-95.png" alt="Chart 95" class="w-full rounded"/></div> -->
+
+    <h2 class="text-2xl font-semibold">Deep Overview: The Generative AI Revolution in Banking</h2>
+
+    <h3 class="text-xl font-semibold mt-2">Current State and Market Dynamics</h3>
+    <p class="text-lg">
+      The banking sector has rapidly embraced AI technologies, with <strong>83.3% of European banks already using artificial intelligence</strong><sup><a href="#s5" class="text-blue-400 underline">[5]</a></sup>. Adoption accelerated post‑ChatGPT, resetting expectations for intelligent, conversational interactions<sup><a href="#s1" class="text-blue-400 underline">[1]</a><a href="#s2" class="text-blue-400 underline ml-1">[2]</a></sup>. <strong>Forrester</strong> projects 2025 as a breakthrough year for conversational banking as leaders deliver more humanlike, connected experiences<sup><a href="#s2" class="text-blue-400 underline">[2]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">Key Technologies Driving Transformation</h3>
+    <p class="text-lg">
+      <strong>Conversational AI & NLP</strong>: Virtual assistants now resolve complex queries with <strong>90%+ success</strong> in leading deployments; <strong>Nordea</strong> runs 12 virtual agents across four markets, automating <strong>~49.5%</strong> of support traffic<sup><a href="#s6" class="text-blue-400 underline">[6]</a><a href="#s7" class="text-blue-400 underline ml-1">[7]</a></sup>.
+      <br/><strong>Generative AI applications</strong>: Customer support, document generation, regulatory reporting, fraud detection, and personalized advice—<strong>~40% of EU banks</strong> are already experimenting with GenAI<sup><a href="#s1" class="text-blue-400 underline">[1]</a><a href="#s8" class="text-blue-400 underline ml-1">[8]</a><a href="#s9" class="text-blue-400 underline ml-1">[9]</a></sup>.
+      <br/><strong>Large Language Models (LLMs)</strong>: Context‑aware interactions, sentiment, and prediction; some banks pursue proprietary LLMs (e.g., Poland’s PLLuM)<sup><a href="#s10" class="text-blue-400 underline">[10]</a><a href="#s11" class="text-blue-400 underline ml-1">[11]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">The Evolution Toward Agentic AI</h3>
+    <p class="text-lg">
+      The next frontier is <strong>agentic AI</strong> that autonomously executes tasks: decisioning, risk assessment, and product optimization. Bank roles shift toward “managing AI agents” and orchestrating workflows rather than manual execution<sup><a href="#s12" class="text-blue-400 underline">[12]</a></sup>.
+    </p>
+
+    <h2 class="text-2xl font-semibold">Implications for Banks</h2>
+
+    <h3 class="text-xl font-semibold mt-2">Strategic Imperatives</h3>
+    <ol class="list-decimal ml-6 text-lg space-y-2">
+      <li><strong>Technology infrastructure modernization</strong>: Only <strong>23% of banks effectively leverage data</strong> in strategic decisions—banks need AI‑ready data governance and platforms<sup><a href="#s13" class="text-blue-400 underline">[13]</a><a href="#s12" class="text-blue-400 underline ml-1">[12]</a></sup>.</li>
+      <li><strong>Workforce transformation</strong>: AI displaces some work but creates roles in AI management and human‑AI collaboration; <strong>79% of finance workers</strong> report AI improves their performance<sup><a href="#s14" class="text-blue-400 underline">[14]</a></sup>.</li>
+      <li><strong>Customer experience reimagining</strong>: <strong>74% of consumers</strong> want more personalization—hyper‑personalized, AI‑powered services are the bar<sup><a href="#s15" class="text-blue-400 underline">[15]</a></sup>.</li>
+      <li><strong>Risk management evolution</strong>: Address privacy, bias, model risk, and the <strong>EU AI Act</strong> with robust governance<sup><a href="#s16" class="text-blue-400 underline">[16]</a><a href="#s9" class="text-blue-400 underline ml-1">[9]</a></sup>.</li>
+    </ol>
+
+    <h3 class="text-xl font-semibold mt-2">Operational Benefits & Challenges</h3>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-zinc-900 p-4 rounded-lg">
+        <p class="font-semibold">Benefits</p>
+        <ul class="list-disc ml-6">
+          <li>Cost reduction via automation (up to <strong>$1T by 2030</strong>)<sup><a href="#s17" class="text-blue-400 underline">[17]</a></sup></li>
+          <li>Enhanced fraud detection & risk management<sup><a href="#s8" class="text-blue-400 underline">[8]</a><a href="#s18" class="text-blue-400 underline ml-1">[18]</a></sup></li>
+          <li>Higher satisfaction & retention<sup><a href="#s19" class="text-blue-400 underline">[19]</a><a href="#s10" class="text-blue-400 underline ml-1">[10]</a></sup></li>
+          <li>Faster product development<sup><a href="#s8" class="text-blue-400 underline">[8]</a></sup></li>
+        </ul>
+      </div>
+      <div class="bg-zinc-900 p-4 rounded-lg">
+        <p class="font-semibold">Challenges</p>
+        <ul class="list-disc ml-6">
+          <li>Compliance under evolving regulation<sup><a href="#s16" class="text-blue-400 underline">[16]</a><a href="#s9" class="text-blue-400 underline ml-1">[9]</a></sup></li>
+          <li>Data quality & governance<sup><a href="#s18" class="text-blue-400 underline">[18]</a><a href="#s12" class="text-blue-400 underline ml-1">[12]</a></sup></li>
+          <li>Cybersecurity & privacy concerns<sup><a href="#s20" class="text-blue-400 underline">[20]</a><a href="#s21" class="text-blue-400 underline ml-1">[21]</a></sup></li>
+          <li>Talent acquisition & retention<sup><a href="#s13" class="text-blue-400 underline">[13]</a><a href="#s22" class="text-blue-400 underline ml-1">[22]</a></sup></li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 class="text-2xl font-semibold">Socio‑Economic Implications</h2>
+
+    <h3 class="text-xl font-semibold mt-2">Employment Impact</h3>
+    <p class="text-lg">
+      AI shifts roles more than it eliminates jobs. <strong>38% of financial‑services workers</strong> in Ireland expect job impact; users report higher performance and satisfaction<sup><a href="#s14" class="text-blue-400 underline">[14]</a><a href="#s23" class="text-blue-400 underline ml-1">[23]</a></sup>. Targeted reskilling is essential, especially for groups with higher displacement risk<sup><a href="#s14" class="text-blue-400 underline">[14]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">Financial Inclusion & Accessibility</h3>
+    <p class="text-lg">
+      24/7 multilingual conversational AI expands access, while AI‑driven ID verification can <strong>save ~$900M</strong> and <strong>cut onboarding time by ~30%</strong><sup><a href="#s19" class="text-blue-400 underline">[19]</a><a href="#s24" class="text-blue-400 underline ml-1">[24]</a><a href="#s25" class="text-blue-400 underline ml-1">[25]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">Trust & Consumer Protection</h3>
+    <p class="text-lg">
+      <strong>72%</strong> believe AI will improve self‑service, but only <strong>42%</strong> think it will improve personal finances—closing this trust gap requires transparent AI and strong protections<sup><a href="#s17" class="text-blue-400 underline">[17]</a></sup>.
+    </p>
+
+    <h2 class="text-2xl font-semibold">European Outlook</h2>
+
+    <h3 class="text-xl font-semibold mt-2">Regulatory Landscape</h3>
+    <p class="text-lg">
+      The <strong>EU AI Act</strong> (in force since 2024) introduces a risk‑based regime: high‑risk systems (e.g., credit scoring) require documentation, human oversight, and transparency with national rollouts through 2026<sup><a href="#s16" class="text-blue-400 underline">[16]</a><a href="#s26" class="text-blue-400 underline ml-1">[26]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">European Banks’ Approach</h3>
+    <ul class="list-disc ml-6 text-lg">
+      <li><strong>Nordea</strong>: 12 virtual agents, 90%+ resolution, 23k+ monthly conversations, ~20 FTE equivalent<sup><a href="#s6" class="text-blue-400 underline">[6]</a><a href="#s7" class="text-blue-400 underline ml-1">[7]</a><a href="#s73" class="text-blue-400 underline ml-1">[73]</a></sup></li>
+      <li><strong>Finanz Informatik</strong>: NVIDIA AI Enterprise at scale for German Savings Banks<sup><a href="#s27" class="text-blue-400 underline">[27]</a></sup></li>
+      <li><strong>Lunar Bank</strong>: Europe’s first GenAI native voice assistant (GPT‑4o), expected to handle <strong>~75%</strong> of calls<sup><a href="#s28" class="text-blue-400 underline">[28]</a></sup></li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-2">Neobank Innovation in Europe</h3>
+    <ul class="list-disc ml-6 text-lg">
+      <li><strong>Revolut</strong>: 25M+ customers; multi‑currency, fraud AI, personalized insights<sup><a href="#s29" class="text-blue-400 underline">[29]</a><a href="#s30" class="text-blue-400 underline ml-1">[30]</a></sup></li>
+      <li><strong>N26</strong>: 10M+ users, AI‑powered “Insights,” seamless cross‑border UX<sup><a href="#s31" class="text-blue-400 underline">[31]</a></sup></li>
+      <li><strong>bunq</strong>: AI for budgeting & footprint tracking<sup><a href="#s31" class="text-blue-400 underline">[31]</a><a href="#s32" class="text-blue-400 underline ml-1">[32]</a></sup></li>
+    </ul>
+
+    <h2 class="text-2xl font-semibold">Worldwide Outlook</h2>
+
+    <h3 class="text-xl font-semibold mt-2">Global Banking AI Adoption</h3>
+    <p class="text-lg">
+      North America leads AI investment (projected <strong>$97B by 2027</strong>), with assistants like Erica/Eno at scale; APAC (e.g., DBS) shows advanced risk/decisioning AI. AI exposure varies widely—<strong>12%</strong> of workers in low‑income vs. <strong>60%</strong> in advanced economies<sup><a href="#s14" class="text-blue-400 underline">[14]</a><a href="#s13" class="text-blue-400 underline ml-1">[13]</a><a href="#s33" class="text-blue-400 underline ml-1">[33]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">Emerging Market Considerations</h3>
+    <p class="text-lg">
+      Digital divide persists (literacy, cybersecurity, policy), but mobile‑first banking enables leapfrogging<sup><a href="#s20" class="text-blue-400 underline">[20]</a><a href="#s33" class="text-blue-400 underline ml-1">[33]</a></sup>.
+    </p>
+
+    <h3 class="text-xl font-semibold mt-2">Global Fintech & Neobank Landscape</h3>
+    <p class="text-lg">
+      Brazil’s <strong>Nubank</strong> crossed 100M customers and $1B profit (2024), highlighting AI‑native scale, while European peers still chase profitability and IPOs; cloud/open‑source accelerates global catch‑up<sup><a href="#s30" class="text-blue-400 underline">[30]</a><a href="#s25" class="text-blue-400 underline ml-1">[25]</a><a href="#s34" class="text-blue-400 underline ml-1">[34]</a></sup>.
+    </p>
+
+    <h2 class="text-2xl font-semibold">Conclusions & Recommendations for CEE Strategy</h2>
+
+    <h3 class="text-xl font-semibold mt-2">Regional Context</h3>
+    <ul class="list-disc ml-6 text-lg">
+      <li>High ICT density & digital exports; strong policy support<sup><a href="#s35" class="text-blue-400 underline">[35]</a><a href="#s36" class="text-blue-400 underline ml-1">[36]</a></sup></li>
+      <li>Emerging national AI strategies (CZ, PL, HU), Western bank presence<sup><a href="#s11" class="text-blue-400 underline">[11]</a><a href="#s36" class="text-blue-400 underline ml-1">[36]</a><a href="#s38" class="text-blue-400 underline ml-1">[38]</a></sup></li>
+      <li>Constraints: R&amp;D spend, talent scarcity, infra gaps, reliance on EU funds<sup><a href="#s35" class="text-blue-400 underline">[35]</a><a href="#s13" class="text-blue-400 underline ml-1">[13]</a><a href="#s39" class="text-blue-400 underline ml-1">[39]</a><a href="#s40" class="text-blue-400 underline ml-1">[40]</a></sup></li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-2">Strategic Recommendations</h3>
+    <h4 class="font-semibold mt-2">1) Establish a CEE AI Banking Alliance</h4>
+    <ul class="list-disc ml-6">
+      <li>Shared compute, multilingual models, harmonized governance, talent pipelines<sup><a href="#s35" class="text-blue-400 underline">[35]</a></sup></li>
+    </ul>
+    <h4 class="font-semibold mt-2">2) Make Conversational AI the Primary Interface</h4>
+    <ul class="list-disc ml-6">
+      <li>24/7 chat/voice, local languages, seamless human handoff; target <strong>~75%</strong> automation by 2027<sup><a href="#s28" class="text-blue-400 underline">[28]</a><a href="#s19" class="text-blue-400 underline ml-1">[19]</a></sup></li>
+    </ul>
+    <h4 class="font-semibold mt-2">3) Leverage Open Banking & API Integration</h4>
+    <ul class="list-disc ml-6">
+      <li>API‑first, embedded finance, data‑sharing for personalization, position as tech providers<sup><a href="#s41" class="text-blue-400 underline">[41]</a><a href="#s42" class="text-blue-400 underline ml-1">[42]</a></sup></li>
+    </ul>
+    <h4 class="font-semibold mt-2">4) Phased AI Adoption</h4>
+    <ul class="list-disc ml-6">
+      <li><strong>Phase 1 (2025–26)</strong>: back‑office automation, chatbots, governance, AI Act readiness</li>
+      <li><strong>Phase 2 (2027–28)</strong>: personalization, predictive risk/fraud, omnichannel integration, AI copilots</li>
+      <li><strong>Phase 3 (2029–30)</strong>: agentic AI, AI‑native products, platform business models, regional leadership<sup><a href="#s12" class="text-blue-400 underline">[12]</a></sup></li>
+    </ul>
+    <h4 class="font-semibold mt-2">5) Close Talent & Infrastructure Gaps</h4>
+    <ul class="list-disc ml-6">
+      <li>University partnerships, AI literacy, English‑first teams, labs/fintech programs; invest in cloud‑native, quantum‑ready infra; regional VC for fintech/AI<sup><a href="#s13" class="text-blue-400 underline">[13]</a><a href="#s35" class="text-blue-400 underline ml-1">[35]</a></sup></li>
+    </ul>
+    <h4 class="font-semibold mt-2">6) Build Responsible AI & Trust</h4>
+    <ul class="list-disc ml-6">
+      <li>Ethics boards, explainability, bias monitoring, human oversight; opt‑outs, privacy/security, regular audits<sup><a href="#s16" class="text-blue-400 underline">[16]</a><a href="#s26" class="text-blue-400 underline ml-1">[26]</a></sup></li>
+    </ul>
+
+    <h3 class="text-xl font-semibold mt-2">Expected Outcomes & KPIs</h3>
+    <ul class="list-disc ml-6 text-lg">
+      <li>By 2027: ~<strong>75%</strong> routine interaction automation; <strong>40%</strong> cost reduction; <strong>+25%</strong> CSAT; CEE leadership in multilingual conversational banking</li>
+      <li>By 2030: AI‑powered innovation leaders; export tech globally; balanced efficiency/employment; regulatory exemplars</li>
+    </ul>
+
+    <!-- Sources -->
+    <h2 class="text-2xl font-semibold">Sources</h2>
+    <ol class="list-decimal ml-6 text-blue-400 space-y-1">
+      <li id="s1"><a href="https://www.creatio.com/glossary/generative-ai-in-banking" target="_blank" class="underline">Generative AI in Banking — Creatio</a></li>
+      <li id="s2"><a href="https://www.forrester.com/blogs/2025-the-digital-banking-landscape-is-poised-for-another-transformative-year/" target="_blank" class="underline">Forrester: 2025 Digital Banking Landscape</a></li>
+      <li id="s3"><a href="https://finance.yahoo.com/news/generative-artificial-intelligence-ai-banking-141500056.html" target="_blank" class="underline">GenAI in Banking & Finance Market — Yahoo Finance</a></li>
+      <li id="s4"><a href="https://aisera.com/blog/conversational-ai-banking/" target="_blank" class="underline">Conversational AI for Finance — Aisera</a></li>
+      <li id="s5"><a href="https://www.funcas.es/wp-content/uploads/2023/07/Carbo-12-4_1.pdf" target="_blank" class="underline">AI & Banking Sector (Europe) — Funcas (PDF)</a></li>
+      <li id="s6"><a href="https://digitalisationworld.com/news/64482/nordea-adopts-a-conversational-ai-approach-to-banking-to-transform-the-customer-experience" target="_blank" class="underline">Nordea adopts conversational AI — Digitalisation World</a></li>
+      <li id="s7"><a href="https://boost.ai/case-studies/how-conversational-ai-is-pioneering-the-digitization-of-banks-in-the-nordics/" target="_blank" class="underline">Conversational AI digitizes Nordic banks — boost.ai</a></li>
+      <li id="s8"><a href="https://www.ey.com/en_gr/insights/financial-services/how-artificial-intelligence-is-reshaping-the-financial-services-industry" target="_blank" class="underline">AI reshaping FS — EY</a></li>
+      <li id="s9"><a href="https://www.eba.europa.eu/publications-and-media/publications/special-topic-artificial-intelligence" target="_blank" class="underline">EBA: Special Topic — AI</a></li>
+      <li id="s10"><a href="https://neontri.com/blog/best-banking-chatbots/" target="_blank" class="underline">Best Chatbots in Banking — Neontri</a></li>
+      <li id="s11"><a href="https://www.gmfus.org/sites/default/files/2024-01/Konopczy%C5%84ski%20-%20AI%20Hungary%20Poland_0.pdf" target="_blank" class="underline">AI Policy in EU Illiberal Democracies — GMF (PDF)</a></li>
+      <li id="s12"><a href="https://assets.kpmg.com/content/dam/kpmg/cy/pdf/2025/intelligent-banking-report.pdf" target="_blank" class="underline">Intelligent Banking: AI‑Driven Value — KPMG (PDF)</a></li>
+      <li id="s13"><a href="https://outsourcing-today.ro/?p=13668" target="_blank" class="underline">Only 23% of banks leverage data — Horváth</a></li>
+      <li id="s14"><a href="https://www.fsunion.org/assets/files/pdf/fsu_impact_of_ai_on_fss_workforce_v2.pdf" target="_blank" class="underline">AI & FS Workforce — FSU (PDF)</a></li>
+      <li id="s15"><a href="https://sbs-software.com/insights/core-banking-customer-first-lens/" target="_blank" class="underline">Customer‑first core banking — SBS</a></li>
+      <li id="s16"><a href="https://paytechlaw.com/en/eu-ai-act/" target="_blank" class="underline">EU AI Act overview — PayTechLaw</a></li>
+      <li id="s17"><a href="https://latinia.com/en/resources/conversational-banking" target="_blank" class="underline">Conversational Banking Impact — Latinia</a></li>
+      <li id="s18"><a href="https://www.frontiersin.org/journals/physics/articles/10.3389/fphy.2023.1297912/full" target="_blank" class="underline">Digital transformation & systemic risk — Frontiers</a></li>
+      <li id="s19"><a href="https://sinch.com/blog/conversational-banking/" target="_blank" class="underline">Conversational Banking Guide 2025 — Sinch</a></li>
+      <li id="s20"><a href="https://wjarr.com/sites/default/files/WJARR-2024-2706.pdf" target="_blank" class="underline">Digital transformation (Ops) — WJARR (PDF)</a></li>
+      <li id="s21"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1544612323006918" target="_blank" class="underline">Digital transformation & bank risk — ScienceDirect</a></li>
+      <li id="s22"><a href="https://www.guidevision.eu/insights/digital-transformation-in-the-dach-region" target="_blank" class="underline">Digital transformation in DACH — GuideVision</a></li>
+      <li id="s23"><a href="https://papers.ssrn.com/sol3/Delivery.cfm/SSRN_ID4786492_code6644518.pdf?abstractid=4786492&mirid=1" target="_blank" class="underline">AI & Job Market in Banking — SSRN (PDF)</a></li>
+      <li id="s24"><a href="https://www.infobip.com/ai-hub/conversational-ai-banking" target="_blank" class="underline">Modernize customer service — Infobip</a></li>
+      <li id="s25"><a href="https://neontri.com/blog/artificial-intelligence-fintech/" target="_blank" class="underline">AI in Fintech — Neontri</a></li>
+      <li id="s26"><a href="https://ceelegalmatters.com/adria-legal-group/28145-the-future-of-banking-in-a-digital-world-in-cee-a-cee-legal-matters-round-table" target="_blank" class="underline">Future of Banking in CEE — CEE Legal Matters</a></li>
+      <li id="s27"><a href="https://blogs.nvidia.com/blog/europe-financial-services-ai/" target="_blank" class="underline">Europe FS goes all‑in on AI — NVIDIA</a></li>
+      <li id="s28"><a href="https://www.lunar.app/en/personal/lunar-launches-genai-native-voice-assistant-for-customer-service-a-first-in-european-banking" target="_blank" class="underline">Lunar GenAI Voice Assistant</a></li>
+      <li id="s29"><a href="https://beaumont-capitalmarkets.co.uk/navigating-neo-banking-in-europe-regulations-licenses-and-growth/" target="_blank" class="underline">Neo‑banking in Europe — Beaumont</a></li>
+      <li id="s30"><a href="https://sifted.eu/pro/briefings/digital-banking-2024" target="_blank" class="underline">Digital banking 2024 — Sifted</a></li>
+      <li id="s31"><a href="https://www.grant-graham.co.uk/en/grant-and-graham-blog/the-rise-of-neobanks-in-europe-an-overview-of-major-players-and-challenges" target="_blank" class="underline">Rise of Neobanks in Europe — Grant & Graham</a></li>
+      <li id="s32"><a href="https://advapay.eu/neobanks-guide-statistics-top-neobanks-trends-launch-steps-your-own-neobank-software/" target="_blank" class="underline">Neobank Guide — Advapay</a></li>
+      <li id="s33"><a href="https://documents1.worldbank.org/curated/en/099629202052521198/pdf/IDU137d75e6614ee0145c919c7f1dc4831e7fa02.pdf" target="_blank" class="underline">AI Exposure of Workers — World Bank (PDF)</a></li>
+      <li id="s34"><a href="https://ctomagazine.com/ai-in-fintech-a-new-era-of-innovation-in-financial-services/" target="_blank" class="underline">AI in FinTech — CTO Magazine</a></li>
+      <li id="s35"><a href="https://sapie.sk/news/mapping-cee-strategies-on-ai" target="_blank" class="underline">Mapping CEE AI strategies — SAPIE</a></li>
+      <li id="s36"><a href="https://www.spglobal.com/_assets/documents/ratings/research/101609954.pdf" target="_blank" class="underline">CEE Banking Outlook 2025 — S&P Global (PDF)</a></li>
+      <li id="s37"><a href="https://ai-watch.ec.europa.eu/countries/czech-republic/czech-republic-ai-strategy-report_en" target="_blank" class="underline">Czech AI Strategy — EC AI Watch</a></li>
+      <li id="s38"><a href="https://www.rbinternational.com/en/raiffeisen/blog/market-trends/cee-banking-sector-report.html" target="_blank" class="underline">CEE Banking Sector — RBI Insights</a></li>
+      <li id="s39"><a href="https://www.elibrary.imf.org/display/book/9781589060135/ch08.xml" target="_blank" class="underline">Banking Reform in CEE — IMF eLibrary</a></li>
+      <li id="s40"><a href="https://documents1.worldbank.org/curated/en/640021585934004225/pdf/Fintech-in-Europe-and-Central-Asia-Maximizing-Benefits-and-Managing-Risks.pdf" target="_blank" class="underline">Fintech in ECA — World Bank (PDF)</a></li>
+      <li id="s41"><a href="https://www.contentifai.agency/open-banking-europe-psd2-compliance-guide/" target="_blank" class="underline">Open Banking Europe: PSD2 Guide 2025</a></li>
+      <li id="s42"><a href="https://www.aspectadvisory.eu/ai-and-the-digital-euro-2/" target="_blank" class="underline">AI & the Digital Euro — Aspect Advisory</a></li>
+      <li id="s43"><a href="https://perspective.orange-business.com/en/the-future-of-banking-how-digital-transformation-enhances-customer-experience/" target="_blank" class="underline">Future of Banking & CX — Orange Business</a></li>
+      <li id="s44"><a href="https://www.fortunebusinessinsights.com/generative-ai-in-bfsi-market-110048" target="_blank" class="underline">GenAI in BFSI — Fortune Business Insights</a></li>
+      <li id="s45"><a href="https://rivaengine.com/digital-transformation-banking/" target="_blank" class="underline">Digital Transformation in Banking — Riva</a></li>
+      <li id="s46"><a href="https://www.swissbanking.ch/_Resources/Persistent/2/0/3/b/203b937e175f25819ea271c883a095fe1dfa1ee0/SBA_Generative-AI-in-Banking_EN.pdf" target="_blank" class="underline">GenAI in Banking — SwissBanking (PDF)</a></li>
+      <li id="s47"><a href="https://www.decta.com/company/media/how-digital-transformation-is-shaping-the-future-of-banking" target="_blank" class="underline">Digital Transformation & Banking — DECTA</a></li>
+      <li id="s48"><a href="https://newsroom.ibm.com/2025-02-05-ibm-study-gen-ai-will-elevate-financial-performance-of-banks-in-2025" target="_blank" class="underline">IBM: GenAI will elevate bank performance</a></li>
+      <li id="s49"><a href="https://www.adaglobal.com/resources/insights/from-transactions-to-conversations-the-evolution-of-banking-with-ai-powered-chatbots" target="_blank" class="underline">From Transactions to Conversations — ADA</a></li>
+      <li id="s50"><a href="https://rfi.global/the-future-of-banking-five-strategies-for-banks-and-fintechs/" target="_blank" class="underline">Future of Banking: Five Strategies — RFI</a></li>
+      <li id="s51"><a href="https://www.mckinsey.com/industries/financial-services/our-insights/extracting-value-from-ai-in-banking-rewiring-the-enterprise" target="_blank" class="underline">Extracting value from AI in banking — McKinsey</a></li>
+      <li id="s52"><a href="https://www.galileo-ft.com/channels/use-case/conversational-ai/" target="_blank" class="underline">Conversational AI in Banking — Galileo</a></li>
+      <li id="s53"><a href="https://www.shs-conferences.org/articles/shsconf/pdf/2024/28/shsconf_dsm2024_01024.pdf" target="_blank" class="underline">Digital transformation & systemic risk (PDF)</a></li>
+      <li id="s54"><a href="https://www.ecb.europa.eu/press/intro/mip-online/2018/html/1803_revisedpsd.en.html" target="_blank" class="underline">Revised PSD (PSD2) — ECB</a></li>
+      <li id="s55"><a href="https://www.sciencedirect.com/science/article/pii/S1059056025006070" target="_blank" class="underline">Risk Management in Digital Banking — ScienceDirect</a></li>
+      <li id="s56"><a href="https://www.ebf.eu/wp-content/uploads/2024/05/Final-report_Impact-of-AI-on-banking-employment-in-Europe.pdf" target="_blank" class="underline">Impact of AI on Banking Employment — EBF (PDF)</a></li>
+      <li id="s57"><a href="https://www.knplaw.com/wp-content/uploads/2022/02/Artificial-Intelligence-in-Financial-Services-in-Europe-2022.pdf" target="_blank" class="underline">AI in FS in Europe — KNP LAW (PDF)</a></li>
+      <li id="s58"><a href="https://www.nature.com/articles/s41599-025-05319-4" target="_blank" class="underline">Market concentration & credit risk — Nature</a></li>
+      <li id="s59"><a href="https://institute.global/insights/economic-prosperity/the-impact-of-ai-on-the-labour-market" target="_blank" class="underline">Impact of AI on Labour Market — TBI</a></li>
+      <li id="s60"><a href="https://www.abe-eba.eu/thought-leadership-innovation/open-finance-working-group/management-summary-artificial-intelligence-in-the-era-of-open-banking/" target="_blank" class="underline">AI in the era of Open Banking — EBA/ABE</a></li>
+      <li id="s61"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5081986" target="_blank" class="underline">Digital Risk Management — SSRN</a></li>
+      <li id="s62"><a href="http://www.baltijapublishing.lv/index.php/issue/article/view/2479" target="_blank" class="underline">AI in Banking: Socio‑Economic Aspects — Baltic Journal</a></li>
+      <li id="s63"><a href="https://gfmag.com/banking/ai-is-reshaping-financial-services-redefining-the-role-of-banks/" target="_blank" class="underline">AI is reshaping FS — Global Finance</a></li>
+      <li id="s64"><a href="https://www.spglobal.com/_assets/documents/ratings/research/101589705.pdf" target="_blank" class="underline">CEE Banking 2024 — S&P (PDF)</a></li>
+      <li id="s65"><a href="https://www.mckinsey.com/featured-insights/lifting-europes-ambition/videos-and-podcasts/the-state-of-gen-ai-implementation-among-european-banks" target="_blank" class="underline">GenAI among European banks — McKinsey</a></li>
+      <li id="s66"><a href="https://www.elibrary.imf.org/downloadpdf/display/book/9781589060135/ch08.pdf" target="_blank" class="underline">Banking Sector Reform in CEE — IMF (PDF)</a></li>
+      <li id="s67"><a href="https://reports.weforum.org/docs/WEF_Artificial_Intelligence_in_Financial_Services_2025.pdf" target="_blank" class="underline">AI in FS 2025 — WEF (PDF)</a></li>
+      <li id="s68"><a href="https://cib.bnpparibas/central-and-eastern-europe-going-for-growth/" target="_blank" class="underline">CEE: Going for growth — BNP Paribas CIB</a></li>
+      <li id="s69"><a href="https://www.oliverwyman.com/our-expertise/insights/2025/jun/ai-tech-trends-transforming-retail-banking.html" target="_blank" class="underline">AI changing retail banking — Oliver Wyman</a></li>
+      <li id="s70"><a href="https://www.sciencedirect.com/science/article/pii/S105752192400632X" target="_blank" class="underline">AI tech in banking — ScienceDirect</a></li>
+      <li id="s71"><a href="https://www.backbase.com/press/backbase-strengthens-commitment-in-the-dach-region" target="_blank" class="underline">Backbase in DACH — Press</a></li>
+      <li id="s72"><a href="https://blog.ebankit.com/blog-press/navigating-digital-transformation-insights-into-the-dach-region-banking-sector" target="_blank" class="underline">DACH digital transformation — ebankIT</a></li>
+      <li id="s73"><a href="https://boost.ai/case-studies/nordea-employs-comprehensive-conversational-ai-strategy-to-scale-customer-service/" target="_blank" class="underline">Nordea’s scalable AI strategy — boost.ai</a></li>
+      <li id="s74"><a href="https://www.dataleon.ai/en/blog/unveiling-the-top-5-digital-banks-in-europe-2024" target="_blank" class="underline">Top 5 digital banks in Europe — Dataleon</a></li>
+      <li id="s75"><a href="https://www.netcetera.com/stories/news/successful-IT-strategies-for-banks.html" target="_blank" class="underline">IT strategy for banks — Netcetera</a></li>
+      <li id="s76"><a href="https://www.nordiccapital.com/news-views/views/spotlight-on-ai-boostai-transforming-conversational-ai-for-fortune-1000-companies/" target="_blank" class="underline">Boost.ai profile — Nordic Capital</a></li>
+      <li id="s77"><a href="https://ergomania.eu/europes-most-popular-digital-banks-what-should-we-know-about-them/" target="_blank" class="underline">Popular digital banks — Ergomania</a></li>
+      <li id="s78"><a href="https://www.ebankit.com/digital-banking-insights/digital-transformation-in-the-dach-region" target="_blank" class="underline">Central Europe Banking — ebankIT</a></li>
+      <li id="s79"><a href="https://www.conversationalainews.com/conversational-ai-the-next-banking-interface/" target="_blank" class="underline">Conversational AI: Next interface</a></li>
+      <li id="s80"><a href="https://www.linkedin.com/pulse/mobile-banking-europe-between-tradition-innovation-alexander-kvasha-r0buf" target="_blank" class="underline">Mobile Banking in Europe — LinkedIn</a></li>
+      <li id="s81"><a href="https://nordicapis.com/how-dach-based-challenger-banks-are-utilizing-apis/" target="_blank" class="underline">DACH challenger banks & APIs — Nordic APIs</a></li>
+      <li id="s82"><a href="https://www.evalueserve.com/blog/banking-transformed-inside-the-cee-digital-reinvention/" target="_blank" class="underline">Banking transformed in CEE — Evalueserve</a></li>
+      <li id="s83"><a href="https://papers.academic-conferences.org/index.php/icair/article/view/3197" target="_blank" class="underline">AI in Banking: Evidence from Poland</a></li>
+      <li id="s84"><a href="https://therecursive.com/the-rise-of-fintech-in-cee-a-mapping-of-60-startups-and-companies-across-the-region/" target="_blank" class="underline">Rise of Fintech in CEE — The Recursive</a></li>
+      <li id="s85"><a href="https://centraleuropeantimes.com/new-research-delves-into-hungarys-ai-use/" target="_blank" class="underline">Hungary’s AI use — Central European Times</a></li>
+      <li id="s86"><a href="https://www.army-technology.com/news/poland-ai-implementation-center/" target="_blank" class="underline">Poland AI Implementation Centre — News</a></li>
+      <li id="s87"><a href="https://www.emerald.com/books/edited-volume/17037/chapter/94036004/Exploring-Fintech-Ventures-and-Regulatory" target="_blank" class="underline">Fintech Ventures & Regulatory — Emerald</a></li>
+      <li id="s88"><a href="https://www.bcg.com/publications/2025/for-banks-the-ai-reckoning-has-arrived" target="_blank" class="underline">AI reckoning for banks — BCG</a></li>
+      <li id="s89"><a href="https://therecursive.com/10-fintech-startups-in-cee-you-should-follow/" target="_blank" class="underline">10 CEE fintech startups — The Recursive</a></li>
+      <li id="s90"><a href="https://cms.law/en/media/local/cms-cmno/files/other/digital-horizons-responsible-ai?v=6" target="_blank" class="underline">Responsible AI in CEE — CMS (PDF)</a></li>
+      <li id="s91"><a href="https://artificialintelligenceact.eu/national-implementation-plans/" target="_blank" class="underline">AI Act national implementation</a></li>
+      <li id="s92"><a href="https://www.mckinsey.com/~/media/mckinsey/industries/financial%20services/our%20insights/europes%20fintech%20opportunity/europes%20fintech%20opportunity-full-report.pdf" target="_blank" class="underline">Europe’s Fintech Opportunity — McKinsey (PDF)</a></li>
+      <li id="s93"><a href="https://ceedigital.org/assets/pdf/Report_CEE_AI_CHALLENGERS_2025.pdf" target="_blank" class="underline">CEE AI Challengers 2025 — CEEDigital (PDF)</a></li>
+      <li id="s94"><a href="https://artificialintelligenceact.eu/ai-regulatory-sandbox-approaches-eu-member-state-overview/" target="_blank" class="underline">AI regulatory sandboxes — Overview</a></li>
+    </ol>
+  </div>
+</body>
+</html>
